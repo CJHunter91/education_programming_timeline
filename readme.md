@@ -15,4 +15,5 @@ Installation Process
 * Use node package manager to install dependencies in the client folder and the root directory.
 * Run the server in client and root directory via npm Start.
 * Run webpack in client using npm run start_web.
+* Run mongod and use seeds.js to seed db 
 

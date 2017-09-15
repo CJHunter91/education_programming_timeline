@@ -1,6 +1,7 @@
 //use collection name
+use program_education;
 
-//insert 
+db.languages.drop();
 
 var languageData = [
 {
@@ -16,8 +17,11 @@ var languageData = [
   cons: ["not as efficent"],
   popularity: {
     1996: 100
-  }
-  documentation: ["https://ruby-doc.org/core-2.4.1/"]
-  links: []
+  },
+  documentation: ["https://ruby-doc.org/core-2.4.1/"],
+  links: ["lorem"]
 }
 ];
+
+//insert 
+db.languages.insert(languageData);
