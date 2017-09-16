@@ -10,8 +10,9 @@ AjaxRequest.prototype.get = function(language, callback){
         if (request.status === 200){
             var jsonString = request.responseText;
             this.languages = JSON.parse(jsonString);
-            callback(this.languages);
             console.log(this.languages)
+
+            callback(this.languages);
             
         }
     }.bind(this);

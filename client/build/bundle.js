@@ -72,7 +72,7 @@ var AjaxRequest = __webpack_require__(1);
 
 var app = function(){
     
-    var ajaxRequest = new AjaxRequest('http://localhost:3001/api/languages');
+    var ajaxRequest = new AjaxRequest('http://localhost:3000/api/languages');
 
     ajaxRequest.get();
 }
@@ -95,8 +95,9 @@ AjaxRequest.prototype.get = function(language, callback){
         if (request.status === 200){
             var jsonString = request.responseText;
             this.languages = JSON.parse(jsonString);
-            callback(this.languages);
             console.log(this.languages)
+
+            callback(this.languages);
             
         }
     }.bind(this);
