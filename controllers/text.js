@@ -11,8 +11,11 @@ MongoClient.connect('mongodb://localhost:27017/program_education', function(err,
 
 //show
 textRouter.get('/:id', function(req, res){
-  db.collection('text').find({name: req.params.id}).toArray(function(err, results){
-    if(err) console.log("error: " + err);
+  console.log(req.params.id)
+  db.collection('text').find({title: req.params.id}).toArray(function(err, results){
+    if(err) console.log("error with request: " + err);
     res.json(results);
   });
 })
+
+module.exports = textRouter;
