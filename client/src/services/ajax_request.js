@@ -3,7 +3,7 @@ var AjaxRequest = function(url){
     this.languages = [];
 }
 
-AjaxRequest.prototype.get = function(language, callback){
+AjaxRequest.prototype.get = function( callback ){
     var request = new XMLHttpRequest();
     request.open('GET', this.url);
     request.onload = function(){
