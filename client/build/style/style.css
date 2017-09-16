@@ -1,0 +1,39 @@
+.container {
+    width: 1000px;
+    position: relative;
+}
+
+.header {
+    clear: both;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.sidebar {
+    float: left;
+    width: 100px;
+    /* border: 1px solid black; */
+}
+
+ul {
+  list-style-type: none;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
+
+.content {
+    float: right;
+    width: 840px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.footer {
+    clear: both;
+    margin-top: 10px;
+    height: 100px;
+    border: 1px solid black;
+}
