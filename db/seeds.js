@@ -19,7 +19,260 @@ var languageData = [
     1996: 100
   },
   documentation: ["https://ruby-doc.org/core-2.4.1/"],
-  links: ["lorem"]
+  links: ["lorem"],
+  icon: ""
+},
+{
+  id: 2,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 3,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 4,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 5,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 6,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 7,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 8,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 9,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 10,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 11,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 12,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 13,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 14,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
+},
+{
+  id: 15,
+  language: "",
+  author: "",
+  description: "",
+  year: "",
+  usedBy: "",
+  usedFor: "",
+  exampleCode: " ",
+  pros: [""],
+  cons: [""],
+  popularity: {
+    1996: 100
+  },
+  documentation: [""],
+  links: [""],
+  icon: ""
 }
 ];
 
