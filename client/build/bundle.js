@@ -73,7 +73,9 @@ var AjaxRequest = __webpack_require__(1);
 var app = function(){
     
     var ajaxRequest = new AjaxRequest('http://localhost:3000/api/languages');
+    //call view pass 
 
+    //pass the get a view callback
     ajaxRequest.get();
 }
 
@@ -88,7 +90,7 @@ var AjaxRequest = function(url){
     this.languages = [];
 }
 
-AjaxRequest.prototype.get = function(language, callback){
+AjaxRequest.prototype.get = function( callback ){
     var request = new XMLHttpRequest();
     request.open('GET', this.url);
     request.onload = function(){
