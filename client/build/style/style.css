@@ -1,0 +1,30 @@
+.container {
+    width: 1000px;
+    position: relative;
+}
+
+.header {
+    clear: both;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.sidebar {
+    float: left;
+    width: 350px;
+    border: 1px solid black;
+}
+
+.content {
+    float: right;
+    width: 640px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.footer {
+    clear: both;
+    margin-top: 10px;
+    height: 820px;
+    border: 1px solid black;
+}
