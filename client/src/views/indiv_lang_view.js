@@ -20,16 +20,18 @@ IndivLangView.prototype.render = function(language) {
     var prosList = document.createElement('ul');
     var consList = document.createElement('ul');
     var popularity = document.createElement('section')
+    var proListTitle = document.createElement('h4');
 
     //adding data
-    title.innerText = language.language;
-    author.innerText = language.author;
-    desc.innerText = language.description;
-    year.innerText = language.year;
-    usedBy.innerText = language.usedBy;
-    usedFor.innerText = language.usedFor;
-    exCode.innerText = language.exampleCode;
-    docs.innerText = language.documentation[0];
+    title.innerText = language[0].language;
+    author.innerText = language[0].author;
+    desc.innerText = language[0].description;
+    year.innerText = language[0].year;
+    usedBy.innerText = language[0].usedBy;
+    usedFor.innerText = language[0].usedFor;
+    exCode.innerText = language[0].exampleCode;
+    docs.innerText = language[0].documentation;
+    proListTitle.innerText = "Pros:"
     
 
     //appending tags
@@ -40,16 +42,18 @@ IndivLangView.prototype.render = function(language) {
     section.appendChild(usedBy);
     section.appendChild(usedFor);
     section.appendChild(linksList);
-    section.appendChild(prosList);
+    section.appendChild(proListTitle);
+    proListTitle.appendChild(prosList);
     section.appendChild(consList);
     section.appendChild(popularity);
+    console.log(language[0].pros);
     
-    language.pros.forEach(function(pro){
+    language[0].pros.forEach(function(pro){
         var proLi = document.createElement('li');
         proLi.innerText = pro; 
-        prosList.appendChild(pro);
+        prosList.appendChild(proLi);
     })
-} 
+}
 
 module.exports = IndivLangView;
 
