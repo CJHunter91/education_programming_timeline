@@ -36,6 +36,7 @@ IndivLangView.prototype.render = function(language) {
     conListTitle.innerText = "Cons:"
     docListTitle.innerText = "Documentation:"
     linksTitle.innerText = "Useful Links:"
+    popularity.id = "popChart";
     
 
     //appending tags
