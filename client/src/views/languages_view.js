@@ -8,7 +8,7 @@ LanguagesView.prototype.render = function(data) {
     var ul = document.createElement('ul');
     data.forEach(function(language) {
         var li = document.createElement('li');
-        li.innerText = language.language;
+        li.innerHTML = `<a href="/" class="btn btn-default"> ${language.language} </a>`;
         ul.appendChild(li);
     });
     section.appendChild(ul);
