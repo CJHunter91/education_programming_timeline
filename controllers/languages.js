@@ -13,8 +13,6 @@ MongoClient.connect('mongodb://localhost:27017/program_education', function(err,
 
 //show
 languageRouter.get('/:id', function(req, res){
-    console.log(parseInt(req.params.id))
-    console.log("BLEJH")
     db.collection('languages').find({id: parseInt(req.params['id'])}).toArray(function(err, results){
         if(err) console.log("oops " + err);
         res.json(results);
