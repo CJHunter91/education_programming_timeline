@@ -10,7 +10,6 @@ var app = function(){
     var indivLangView = new IndivLangView();
     var languageView = new LanguageView();
     var textView = new TextView();
-    var rubyButton = document.querySelector('#ruby');
     //call view pass 
 
 
@@ -18,14 +17,8 @@ var app = function(){
     ajaxRequest.get(languageView.render);
 
     //ready for history text request
-    // ajaxTextRequest.get(textView.render);
+    ajaxTextRequest.get(textView.render);
 
-    //show the individual language on click
-    rubyButton.addEventListener('click', function(e){
-        e.preventDefault();
-        var ajaxLangRequest = new AjaxRequest('http://localhost:3000/api/languages/1');
-        ajaxLangRequest.get(indivLangView.render);
-    })
 
     
 }
