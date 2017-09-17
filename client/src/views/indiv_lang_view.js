@@ -5,17 +5,9 @@ var IndivLangView = function() {
 
 IndivLangView.prototype.render = function(language) {
 
-    var clearPage = function(){
-        var myNode = document.getElementById('main-view');
-        while (myNode.firstChild) {
-            myNode.removeChild(myNode.firstChild);
-    }
-    };
-
-    clearPage();
-
     var section = document.getElementById('main-view');
-
+    //removes any elements from main view
+    section.innerHTML = '';
     //create elements
     var title = document.createElement('h2');
     var author = document.createElement('h3');
