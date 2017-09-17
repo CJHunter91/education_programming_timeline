@@ -13,10 +13,11 @@
     float: left;
     width: 100px;
     /* border: 1px solid black; */
-}
+}  
 
 ul {
   list-style-type: none;
+  padding: 0px;
 }
 
 img{
