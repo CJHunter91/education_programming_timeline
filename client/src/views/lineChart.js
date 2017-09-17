@@ -1,15 +1,18 @@
 var LineChart = function(langauge){
     var container = document.getElementById('popChart')
-    console.log(langauge[0].popularity)
-    var seriesFill = function(language){
+    var dataFill = function(language){
         var popArray = []
-        
-        for (var year of langauge){
-            var countryDetails = {name: language[0].year, data: [country.population, country.area]}
-             countriesArray.push(countryDetails); 
+        console.log(langauge[0].popularity)
+        for (var year of langauge[0].popularity){
+            var popDetails = {data: Object.values(year)}
+             popArray.push(popDetails); 
         }
+        console.log("----------------")
+        console.log(popArray);
         return popArray
     }
+
+    dataFill();
 
 
     var chart = new Highcharts.Chart({
@@ -19,7 +22,7 @@ var LineChart = function(langauge){
         },
         plotOptions: {
             series: {
-                pointStart: 2010
+                pointStart: langauge[0].popularity
             }
         },
         title: {
