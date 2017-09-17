@@ -61,56 +61,56 @@ var languageData = [
 {
   id: 4,
   language: "Java",
-  author: "",
-  description: "",
-  year: "",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
+  author: "James Gosling",
+  description: "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers 'write once, run anywhere' (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java is one of the most popular programming language used worldwide. The Java language is a key pillar in Android, an open source mobile operating system.",
+  year: "1995",
+  usedBy: "Android OS/apps",
+  usedFor: "Network Programming ,web application development, software development, Graphical User Interface development",
+  exampleCode: "public class HelloWorld {\n\n         public static void main(String[] args) {\n            // Prints 'Hello, World' to the terminal window.\n             System.out.println('Hello, World');\n         }\n     }",
+  pros: ["Currently most used language", "Used for Android app development", "Object Oriented", "Comprehensive Documentation"],
+  cons: ["Can't use multiple inheritence" ,"Though garbage collection is automatic, it’s sometimes poorly or inefficiently done in Java." ,"Primitive types don't inherit from Object."],
   popularity: {
     1996: 100
   },
-  documentation: [""],
-  links: [""],
-  icon: ""
+  documentation: ["http://docs.oracle.com/javase/8/docs/", 'http://docs.oracle.com/javase/8/docs/api/'],
+  links: ["https://www.tutorialspoint.com/java/java_basic_syntax.htm", "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html"],
+  icon: "http://www.nictsolutions.com/assets/images/ja.png"
 },
 {
   id: 5,
   language: "Swift",
-  author: "",
-  description: "",
-  year: "",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
+  author: "Chris Lattner and Apple Inc.",
+  description: "Swift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. for iOS, macOS, watchOS, tvOS, and Linux. Swift is designed to work with Apple's Cocoa and Cocoa Touch frameworks and the large body of existing Objective-C (ObjC) code written for Apple products. Initially a proprietary language, version 2.2 was made open-source software under the Apache License 2.0 on December 3, 2015, for Apple's platforms and Linux.",
+  year: "2014",
+  usedBy: "Apple",
+  usedFor: "iOS apps",
+  exampleCode: "print('Hello, World!')",
+  pros: ["If you know Objective C, it should be easier to pick up", "Can build iOS apps","Swift has a 'playground' that allows programmers to instantly see the result of code", "Open Source","Easier to learn than many other languages"],
+  cons: ["Still in it's infancy so still has many issues that need to be addressed","Few IDEs available","Lack of support for apps less that iOS7"],
   popularity: {
     1996: 100
   },
-  documentation: [""],
-  links: [""],
-  icon: ""
+  documentation: ["https://swift.org/documentation/", "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0"],
+  links: ["https://www.raywenderlich.com/143771/swift-tutorial-part-1-expressions-variables-constants", "http://www.skilledup.com/articles/6-best-free-swift-tutorials-programming-new-language"],
+  icon: "https://developer.apple.com/swift/images/swift-og.png"
 },
 {
   id: 6,
   language: "Objective C",
   author: "Brad Cox and Tom Love",
-  description: "",
+  description: "Objective-C is a general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language. It was the main programming language used by Apple for the OS X and iOS operating systems, and their respective application programming interfaces (APIs) Cocoa and Cocoa Touch prior to the introduction of Swift.",
   year: "1983",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
+  usedBy: "Apple",
+  usedFor: "Apple Programming",
+  exampleCode: "// First program example \n #import <Foundation/Foundation.h> \n \n int main (int argc, const char * argv[]) \n  { \n           NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; \n           NSLog (@'Hello, World!');\n           [pool drain];\n           return 0;\n  }",
+  pros: ["Object Oriented Language", "Objective-C incorporates C so you get all the benefits of C when working within Objective-C", "You can program for Mac and iOS" ],
+  cons: ["There will be aspects of learning C at the same time.", "Big learning curve", ],
   popularity: {
     1996: 100
   },
-  documentation: [""],
-  links: [""],
-  icon: ""
+  documentation: ["https://developer.apple.com/documentation/objectivec?language=objc"],
+  links: ["https://gist.github.com/imagin4ry/7024758", "https://www.tutorialspoint.com/objective_c/objective_c_useful_resources.htm"],
+  icon: "http://sankeysolutions.com/wp-content/uploads/2017/02/Objective-C.png"
 },
 {
   id: 7,
