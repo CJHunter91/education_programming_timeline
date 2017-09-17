@@ -60,7 +60,7 @@ var languageData = [
 },
 {
   id: 4,
-  language: "",
+  language: "Java",
   author: "",
   description: "",
   year: "",
@@ -78,7 +78,7 @@ var languageData = [
 },
 {
   id: 5,
-  language: "",
+  language: "Swift",
   author: "",
   description: "",
   year: "",
@@ -96,10 +96,10 @@ var languageData = [
 },
 {
   id: 6,
-  language: "",
-  author: "",
+  language: "Objective C",
+  author: "Brad Cox and Tom Love",
   description: "",
-  year: "",
+  year: "1983",
   usedBy: "",
   usedFor: "",
   exampleCode: " ",
