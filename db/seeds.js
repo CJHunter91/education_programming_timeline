@@ -13,8 +13,8 @@ var languageData = [
   usedBy: "FreeAgent",
   usedFor: "Web applications",
   exampleCode: "puts 'hello world' ",
-  pros: ["easy to use and learn"],
-  cons: ["not as efficent"],
+  pros: ["easy to use and learn", "object-oriented"],
+  cons: ["not as efficent as other languages"],
   popularity: {
     1996: 100
   },
@@ -31,8 +31,8 @@ var languageData = [
   usedBy: "Facebook, Wikipedia, Digg and Wordpress",
   usedFor: "Creating/Maintaining dynamic webpages and server-side development",
   exampleCode: "echo 'hello world'",
-  pros: ["Open source (free to use), relatively efficent and works on most platforms."],
-  cons: ["Security due to being open-source anyone can view the source code and find weaknesses, Not suitable for larger applications due to lack of modularity."],
+  pros: ["Open source (free to use)", "Relatively efficent", "Works on most platforms."],
+  cons: ["Security due to being open-source anyone can view the source code and find weaknesses", "Not suitable for larger applications due to lack of modularity."],
   popularity: {
     1996: 100
   },
@@ -49,8 +49,8 @@ var languageData = [
   usedBy: "UNIX, embedded systems",
   usedFor: "Cross-platform programming, system programming, UNIX programming",
   exampleCode: "#include<stdio.h>main(){printf('Hello World');}",
-  pros: ["Small clean language, very powerful, can be used in C++ programs"],
-  cons: ["Difficult to learn, code can get messy quickly, needs to be compiled"],
+  pros: ["Small clean language", "Very powerful", "Can be used in C++ programs"],
+  cons: ["Difficult to learn", "Code can get messy quickly", "Needs to be compiled"],
   popularity: {
     1996: 100
   },
@@ -121,7 +121,7 @@ var languageData = [
   usedBy: "VisualStudio, Stack Overflow",
   usedFor: "Can be used with Microsofts .NET framework and is felxible enough to be used in most areas of software development",
   exampleCode: " ",
-  pros: ["Can be statically or dynamically typed, similiar syntax to other c languages, fully integrated with the .NET library."],
+  pros: ["Can be statically or dynamically typed", "Similiar syntax to other C languages", "Fully integrated with the .NET library."],
   cons: ["Less efficent as it is interpreted"],
   popularity: {
     1996: 100
