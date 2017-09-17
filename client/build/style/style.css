@@ -19,14 +19,11 @@
     width: 40%;
 }
 
-.sidebar {
-    
-    /* width: 15%; */
+.sidebar{
     text-align: center;
     float: left;
     width: 15%;
     min-width: 155px;
-    /* border: 1px solid black; */
 }
 
 .sidebar li {
@@ -45,13 +42,15 @@ img{
     height: 40px;
 }
 
+h4 li {
+    font-size: 15px;
+}
+
 .content {
     float: right;
     width: 85%;
-    /* height: 800px; */
     border: 1px solid black;
     padding: 5%;
-    /* min-width: 200px; */
 }
 
 .footer {

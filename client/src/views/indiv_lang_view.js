@@ -27,10 +27,10 @@ IndivLangView.prototype.render = function(language) {
     var linksTitle = document.createElement('h4');
 
     //adding data
-    title.innerText = language[0].language;
-    author.innerText = language[0].author;
+    title.innerText = language[0].language + " - " + language[0].year;
+    author.innerText = "Created by: " +language[0].author;
     desc.innerText = language[0].description;
-    year.innerText = language[0].year;
+    // year.innerText = language[0].year;
     usedBy.innerText = language[0].usedBy;
     usedFor.innerText = language[0].usedFor;
     exCode.innerText = language[0].exampleCode;
@@ -45,7 +45,7 @@ IndivLangView.prototype.render = function(language) {
     section.appendChild(title);
     section.appendChild(author);
     section.appendChild(desc);
-    section.appendChild(year);
+    // section.appendChild(year);
     section.appendChild(usedBy);
     section.appendChild(usedFor);
     section.appendChild(exCode);
