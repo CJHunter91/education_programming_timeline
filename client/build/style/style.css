@@ -1,16 +1,42 @@
 .container {
-    width: 1000px;
+    width: 90%;
     position: relative;
+    
+}
+
+#content-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
 }
 
 .header {
     clear: both;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    padding: 10px;
     border: 1px solid black;
+    text-align: center;
+    width: 40%;
 }
 
-.sidebar {
+.sidebar{
+    text-align: center;
     float: left;
+<<<<<<< HEAD
+    width: 15%;
+    min-width: 155px;
+}
+
+.sidebar li {
+    background-color:#4E5D69;
+    border-bottom: black solid 2px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+=======
     width: 100px;
     /* border: 1px solid black; */
 }  
@@ -18,6 +44,7 @@
 ul {
   list-style-type: none;
   padding: 0px;
+>>>>>>> develop
 }
 
 img{
@@ -25,16 +52,22 @@ img{
     height: 40px;
 }
 
+h4 li {
+    font-size: 15px;
+}
+
 .content {
     float: right;
-    width: 840px;
-    height: 800px;
+    width: 85%;
     border: 1px solid black;
+    padding: 5%;
 }
 
 .footer {
     clear: both;
-    margin-top: 10px;
+    margin: 10px auto;
     height: 100px;
     border: 1px solid black;
+    width: 60%;
+
 }
