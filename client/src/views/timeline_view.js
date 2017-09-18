@@ -6,7 +6,7 @@ var TimelineView = function() {
 
 TimelineView.prototype.render = function(data) {
   var section = document.getElementById('timeline');
-  var ol = document.createElement('ol');
+  var ol = document.getElementById('timeline-list');
   var indivLangView = new IndivLangView();
   //loop through each language
   data.forEach(function(language) {
