@@ -25,7 +25,7 @@ var LineChart = function(langauge){
             }
         },
         title: {
-            text: "Languages popularity over time",
+            text: "Popularity over time",
             style: {
                 color: '#FFF'
             }
