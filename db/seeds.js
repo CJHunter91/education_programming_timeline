@@ -258,60 +258,6 @@ var languageData = [
   documentation: ["https://developer.mozilla.org/en-US/docs/Web/JavaScript"],
   links: ["https://en.wikipedia.org/wiki/JavaScript"],
   icon: "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-},
-{
-  id: 13,
-  language: "",
-  author: "",
-  description: "",
-  year: "",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
-  popularity: {
-    1996: 100
-  },
-  documentation: [""],
-  links: [""],
-  icon: ""
-},
-{
-  id: 14,
-  language: "",
-  author: "",
-  description: "",
-  year: "",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
-  popularity: {
-    1996: 100
-  },
-  documentation: [""],
-  links: [""],
-  icon: ""
-},
-{
-  id: 15,
-  language: "",
-  author: "",
-  description: "",
-  year: "",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
-  popularity: {
-    1996: 100
-  },
-  documentation: [""],
-  links: [""],
-  icon: ""
 }
 ];
 
