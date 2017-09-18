@@ -1,4 +1,5 @@
 var AjaxRequest = require('../services/ajax_request');
+var LineChart = require('./lineChart.js')
 var IndivLangView = function() {
 
 }
@@ -58,9 +59,9 @@ IndivLangView.prototype.render = function(language) {
     docListTitle.appendChild(docsList);
     linksTitle.appendChild(linksList);
     section.appendChild(popularity);
+    // popularity.appendChild(chart);
     console.log(language[0].pros);
-    
-
+    new LineChart(language);
 
     var listGenerate = function(list, appendTo){ 
         list.forEach(function(item){
