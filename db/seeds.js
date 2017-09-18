@@ -6,6 +6,45 @@ db.languages.drop();
 var languageData = [
 {
   id: 1,
+<<<<<<< HEAD
+=======
+  language: "Ruby",
+  author: "matz",
+  description: "Lorem Ipsum",
+  year: "1993",
+  usedBy: "FreeAgent",
+  usedFor: "Web applications",
+  exampleCode: "puts 'hello world' ",
+  pros: ["easy to use and learn", "object-oriented"],
+  cons: ["not as efficent as other languages"],
+  popularity: {
+    1996: 100
+  },
+  documentation: ["https://ruby-doc.org/core-2.4.1/"],
+  links: ["lorem"],
+  icon: "https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg"
+},
+{
+  id: 2,
+  language: "PHP",
+  author: "Rasmus Ledorf",
+  description: "PHP is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML",
+  year: "1995",
+  usedBy: "Facebook, Wikipedia, Digg and Wordpress",
+  usedFor: "Creating/Maintaining dynamic webpages and server-side development",
+  exampleCode: "echo 'hello world'",
+  pros: ["Open source (free to use)", "Relatively efficent", "Works on most platforms."],
+  cons: ["Security due to being open-source anyone can view the source code and find weaknesses", "Not suitable for larger applications due to lack of modularity."],
+  popularity: [{
+    1996: 100
+  }],
+  documentation: ["http://php.net/docs.php"],
+  links: [""],
+  icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+},
+{
+  id: 3,
+>>>>>>> develop
   language: "C",
   author: "Dennis Ritchie",
   description: "General-purpose low level language that a lot of current languages are derivatives of, created for UNIX systems",
@@ -264,6 +303,7 @@ var languageData = [
   pros: ["Speed, Simplicity, Versatility, Server load"],
   cons: ["Security, Reliance on End User."],
   popularity: [
+<<<<<<< HEAD
     {"2004": 13.6},
     {"2005": 12.7},
     {"2006": 11.3},
@@ -278,6 +318,22 @@ var languageData = [
     {"2015": 7.5},
     {"2016": 6.9},
     {"2017": 6.8}
+=======
+    {2004: 7.7},
+    {2005: 7.4},
+    {2006: 7.9},
+    {2007: 7.6},
+    {2008: 7.3},
+    {2009: 7.0},
+    {2010: 6.2},
+    {2011: 6.7},
+    {2012: 6.5},
+    {2013: 6.9},
+    {2014: 7.1},
+    {2015: 7.2},
+    {2016: 7.7},
+    {2017: 8.0},
+>>>>>>> develop
   ],
   documentation: ["https://developer.mozilla.org/en-US/docs/Web/JavaScript"],
   links: ["https://en.wikipedia.org/wiki/JavaScript"],

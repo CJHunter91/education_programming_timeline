@@ -12,7 +12,7 @@ LanguagesView.prototype.render = function(data) {
   data.forEach(function(language) {
     var li = document.createElement('li');
     li.innerHTML = `
-    <a href="/" class="btn btn-default"> ${language.language} <img src=${language.icon}></a>`;
+    <a href="/" class="btn btn-default"><img src=${language.icon}></a>`;
     //adds click handler to each language element
     li.addEventListener('click', function(event){
       event.preventDefault();
