@@ -62,7 +62,12 @@
   border: none;
   background: none;
 }
-#timeline .arrows img {
+
+.arrows .disabled {
+  opacity: .5;
+}
+
+.arrows img {
   width: 45px;
   height: 45px;
 }
