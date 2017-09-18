@@ -13,9 +13,8 @@
 }
 
 #timeline ol {
-  font-size: 0;
   width: 100%;
-  padding: 40px 0;
+  padding: 60px 0;
   transition: all 1s;
 }
 
@@ -39,3 +38,15 @@
   transform: translateY(-50%);
   border-radius: 50%;
   background: #F45B69;
+}
+#timeline a{
+  position: relative;
+  right:10px;
+  top: 10px;
+}
+
+#timeline img{
+  position: relative;
+  right: 41px;
+  bottom: 60px;
+}

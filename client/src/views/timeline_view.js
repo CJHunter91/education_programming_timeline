@@ -12,8 +12,8 @@ TimelineView.prototype.render = function(data) {
   data.forEach(function(language) {
     var li = document.createElement('li');
     li.innerHTML = `
-    <a href="/" class="timeline-date"> ${language.year}</a>`;
-    li.style.backgroundImage = "url(${language.icon})";
+    <a href="/" class="timeline-date"> ${language.year} <img src=${language.icon}></a>`;
+    li.className = "timeline-li";
     //adds click handler to each language element
     li.addEventListener('click', function(event){
       event.preventDefault();
