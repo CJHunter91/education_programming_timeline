@@ -27,7 +27,7 @@ TimelineView.prototype.render = function(data) {
 } 
 
 
-  module.exports = TimelineView;
+module.exports = TimelineView;
 
 
 

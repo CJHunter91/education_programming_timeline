@@ -1,4 +1,5 @@
 var AjaxRequest = require('./services/ajax_request');
+var timeLineAnimation = require('./services/timeline_animation');
 var LanguageView = require('./views/languages_view');
 var IndivLangView = require('./views/indiv_lang_view');
 var TimelineView = require('./views/timeline_view');
@@ -12,9 +13,10 @@ var app = function(){
     var timelineView = new TimelineView();
     var languageView = new LanguageView();
     var textView = new TextView();
-    //call view pass 
-
+    //adds timeLineView
     ajaxRequest.get(timelineView.render)
+    //adds timeline animation
+    timeLineAnimation();
     //pass the get a view callback
     ajaxRequest.get(languageView.render);
 
