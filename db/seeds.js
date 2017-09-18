@@ -132,39 +132,39 @@ var languageData = [
 },
 {
   id: 8,
-  language: "",
-  author: "",
-  description: "",
-  year: "",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
+  language: "TypeScript",
+  author: "Microsoft/developed also by Anders Heilsberg",
+  description: "TypeScript is a free and open-source programming language developed and maintaned by Microsoft",
+  year: "2012",
+  usedBy: "Microsoft",
+  usedFor: "TypeScript originated from the perceived shortcomings of Javascript for the development of large-scale applications",
+  exampleCode: "greet:('hello, world')",
+  pros: ["Rich IDE support with autocomplete and code navgation features", "Typos caught at compilation time", "Class-based OO, with inheritance, private members and interfaces", "Any JavaScript code is a valid TypeScript code"],
+  cons: ["In order to get the most out of TypeScript, developers will need to use the type annotations everywhere in their code, which might at times be cumbersome (or perceived as such coming from a dynamic lanuage background). Some effort might be required to write a stringly-typed version of the JavaScript code."],
   popularity: {
     1996: 100
   },
-  documentation: [""],
-  links: [""],
-  icon: ""
+  documentation: ["https://www.typescriptlang.org/docs/home.html"],
+  links: ["https://github.com/Microsoft/TypeScript/wiki/Useful-Links-for-TypeScript-Issue-Management", "https://www.youtube.com/watch?v=xqYD8QXJX9U"],
+  icon: "http://www.typescriptlang.org/assets/images/icons/apple-touch-icon-180x180.png"
 },
 {
   id: 9,
-  language: "",
-  author: "",
-  description: "",
-  year: "",
-  usedBy: "",
-  usedFor: "",
-  exampleCode: " ",
-  pros: [""],
-  cons: [""],
+  language: "Visual Basic",
+  author: "Microsoft",
+  description: "Visual Basic is a third-generation event-driven programming language and integrated development environment (IDE) for its Component Object Model (COM) programming mode",
+  year: "1991",
+  usedBy: "Microsoft",
+  usedFor: "Microsoft intended Visual Basic to be relatively eary to learn and use. Visual Basic was derived from BASIC, a user friendly programming language designed for beginners, and it enables rapid application development (RAD) of graphical user interface (GUI) applications",
+  exampleCode: " Console.WriteLine ('Hello World using Visual Basic!') ",
+  pros: ["easy to use and learn", "widespread applicability"],
+  cons: ["memory constraints"],
   popularity: {
     1996: 100
   },
-  documentation: [""],
-  links: [""],
-  icon: ""
+  documentation: ["https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference"],
+  links: ["https://www.youtube.com/watch?v=3FkWddODLno"],
+  icon: "https://upload.wikimedia.org/wikipedia/en/e/e4/Visual_Basic_6.0_logo.png"
 },
 {
   id: 10,
