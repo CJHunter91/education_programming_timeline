@@ -1,49 +1,74 @@
+var _ = require('lodash');
 var LineChart = function(langauge){
     var container = document.getElementById('popChart')
     var dataFill = function(language){
         var popArray = []
-        console.log("----------------")
-        console.log(langauge[0].popularity[0]);
+
         for (var year of langauge[0].popularity){
-            var popDetails = {data: Object.values(year)}
+            var popDetails = _.values(year)
              popArray.push(popDetails); 
         }
-        console.log("----------------")
-        console.log(popArray);
         return popArray
     }
 
-    dataFill();
-
-
     var chart = new Highcharts.Chart({
         chart: {
+            backgroundColor: '#4E5D69',
+            color: "#000",
+            polar: true,
             type: "line",
             renderTo: container
         },
         plotOptions: {
             series: {
-                pointStart: langauge[0].popularity
+                pointStart: parseInt(_.keys(langauge[0].popularity[0]))
             }
         },
         title: {
-            text: "Programming Languages over years"
+            text: "Languages popularity over time",
+            style: {
+                color: '#FFF'
+            }
+            
         },
         series: [{
             name: langauge[0].language,
-            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+            data: dataFill()
             }
         ]
         ,
         xAxis: {
+            tickColor: '#FFF',
             title: {
-                text: 'Years'
-            }
+                text: 'Years',
+                style: {
+                    color: '#FFF',
+                    font: '11px Trebuchet MS, Verdana, sans-serif'
+                 }
+            },
+            labels: {
+                style: {
+                   color: '#FFF',
+                   font: '11px Trebuchet MS, Verdana, sans-serif'
+                }
+             },
         },
         yAxis: {
+            color: '#FFF',
             title: {
-                text: '%'
+                text: '%',
+                style: {
+                    color: '#FFF',
+                    font: '11px Trebuchet MS, Verdana, sans-serif'
+                 }
+            },
+            labels: {
+                style: {
+                    color: '#FFF',
+                    font: '11px Trebuchet MS, Verdana, sans-serif'
+                }
             }
+            
         }
     });
 }
