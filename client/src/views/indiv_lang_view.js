@@ -63,18 +63,30 @@ IndivLangView.prototype.render = function(language) {
     console.log(language[0].pros);
     new LineChart(language);
 
-    var listGenerate = function(list, appendTo){ 
+    var linkGenerate = function(list, appendTo){ 
         list.forEach(function(item){
             var listItem = document.createElement('li');
-            listItem.innerText = item; 
+            listItem.innerHTML = `<a href = "${item}">Link</a>`; 
+            console.log("test", item)
             appendTo.appendChild(listItem);
+            
+        })
+    }
+
+    var listGenerate = function (list, appendTo) {
+        list.forEach(function (item) {
+            var listItem = document.createElement('li');
+            listItem.innerHTML =item;
+            console.log("test", item)
+            appendTo.appendChild(listItem);
+
         })
     }
 
     listGenerate(language[0].pros, prosList)
     listGenerate(language[0].cons, consList)
-    listGenerate(language[0].documentation, docsList)
-    listGenerate(language[0].links, linksList)
+    linkGenerate(language[0].documentation, docsList)
+    linkGenerate(language[0].links, linksList)
 }
 
 // IndivLangView.prototype.listGenerate = function(list, appendTo){ 
