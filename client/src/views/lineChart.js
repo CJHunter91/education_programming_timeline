@@ -2,7 +2,8 @@ var LineChart = function(langauge){
     var container = document.getElementById('popChart')
     var dataFill = function(language){
         var popArray = []
-        console.log(langauge[0].popularity)
+        console.log("----------------")
+        console.log(langauge[0].popularity[0]);
         for (var year of langauge[0].popularity){
             var popDetails = {data: Object.values(year)}
              popArray.push(popDetails); 
