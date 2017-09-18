@@ -22,7 +22,6 @@
 .sidebar{
     text-align: center;
     float: left;
-<<<<<<< HEAD
     width: 15%;
     min-width: 155px;
 }
@@ -36,15 +35,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-=======
-    width: 100px;
-    /* border: 1px solid black; */
-}  
-
-ul {
-  list-style-type: none;
-  padding: 0px;
->>>>>>> develop
 }
 
 img{
