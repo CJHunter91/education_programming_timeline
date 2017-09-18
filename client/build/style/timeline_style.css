@@ -1,0 +1,41 @@
+.footer {
+    clear: both;
+    margin: 5px auto;
+    border: 1px solid black;
+    width: 100%;
+    padding: 0px;
+
+}
+
+#timeline {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+#timeline ol {
+  font-size: 0;
+  width: 100%;
+  padding: 40px 0;
+  transition: all 1s;
+}
+
+#timeline ol li {
+  display: inline-block;
+  position: relative;
+  list-style-type: none;
+  width: 160px;
+  height: 3px;
+  background: #F45B69;
+}
+
+#timeline ol li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #F45B69;
