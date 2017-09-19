@@ -99,6 +99,7 @@ IndivLangView.prototype.render = function(language) {
 //     })
 // }
 
+//side button for main container
 IndivLangView.prototype.sideButton = function(){
 
     var container = document.getElementsByClassName('container');

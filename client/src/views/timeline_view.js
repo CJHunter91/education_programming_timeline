@@ -24,6 +24,7 @@ TimelineView.prototype.render = function(data) {
       ajaxLangRequest.get(indivLangView.render);
     }.bind(this));
     //append to the list
+    new LineChart(data);
     ol.appendChild(li);
     
   });
