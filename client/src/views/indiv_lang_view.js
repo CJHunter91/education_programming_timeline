@@ -9,6 +9,11 @@ IndivLangView.prototype.render = function(language) {
     var section = document.getElementById('main-view');
     //removes any elements from main view
     section.innerHTML = '';
+    //creating containers for styling
+    var descriptionSection = document.createElement('section');
+    var proConsSection = document.createElement('section');
+    var linksSection = document.createElement('section');
+
     //create elements
     var title = document.createElement('h2');
     var author = document.createElement('h3');
@@ -35,27 +40,37 @@ IndivLangView.prototype.render = function(language) {
     usedBy.innerText = language[0].usedBy;
     usedFor.innerText = language[0].usedFor;
     exCode.innerText = language[0].exampleCode;
-    proListTitle.innerText = "Pros:"
-    conListTitle.innerText = "Cons:"
-    docListTitle.innerText = "Documentation:"
-    linksTitle.innerText = "Useful Links:"
+    proListTitle.innerText = "Pros:";
+    conListTitle.innerText = "Cons:";
+    docListTitle.innerText = "Documentation:";
+    linksTitle.innerText = "Useful Links:";
     popularity.id = "popChart";
+    proConsSection.id = "proConsSection";
+    linksSection.id = "linksSection";
+    descriptionSection.id = "descriptionSection";
+    exCode.id = "exCode";
+
+
     
 
     //appending tags
-    section.appendChild(title);
-    section.appendChild(author);
-    section.appendChild(desc);
-    // section.appendChild(year);
-    section.appendChild(usedBy);
-    section.appendChild(usedFor);
+    section.appendChild(descriptionSection);
+
+    descriptionSection.appendChild(title);
+    descriptionSection.appendChild(author);
+    descriptionSection.appendChild(desc);
+    descriptionSection.appendChild(usedBy);
+    descriptionSection.appendChild(usedFor);
+
     section.appendChild(exCode);
-    section.appendChild(proListTitle);
-    section.appendChild(conListTitle);
-    section.appendChild(docListTitle);
-    section.appendChild(linksTitle);
+    section.appendChild(proConsSection);
+    section.appendChild(linksSection);
+    proConsSection.appendChild(proListTitle);
+    proConsSection.appendChild(conListTitle);
     proListTitle.appendChild(prosList);
     conListTitle.appendChild(consList);
+    linksSection.appendChild(docListTitle);
+    linksSection.appendChild(linksTitle);
     docListTitle.appendChild(docsList);
     linksTitle.appendChild(linksList);
     section.appendChild(popularity);
