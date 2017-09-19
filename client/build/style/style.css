@@ -75,14 +75,6 @@ h4 li {
     padding: 5%;
 }
 
-.footer {
-    clear: both;
-    margin: 10px auto;
-    height: 100px;
-    border: 1px solid black;
-    width: 60%;
-
-}
 
 #popChart {
     width: 60%;
