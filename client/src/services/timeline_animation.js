@@ -18,14 +18,16 @@ var timelineAnimation = function(){
     arrows[i].addEventListener('click', function(){
       //set next id so setTimeout will run if language id not set
       var nextId = 1;
+      console.log(document.querySelector('#language-id'))
+      console.log(this.id)
       if(document.querySelector('#language-id')){
         const modifier = (this.classList.contains("prev-arrow")) ? -1 : 1;
         nextId = parseInt(document.querySelector('#language-id').textContent) + modifier;
       }
-      // else if (!document.querySelector('#language-id') && this.id === forward){
-      //   console.log(this.id);
-      //   return;
-      // }
+      //stops scrolling the timeline if it's the first click on forward
+      else if (!document.querySelector('#language-id') && this.id === "forward"){
+        return;
+      }
         //disable both while waiting for animation
         prev.disabled = true;
         next.disabled = true;
