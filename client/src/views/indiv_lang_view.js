@@ -1,5 +1,6 @@
 var AjaxRequest = require('../services/ajax_request');
 var LineChart = require('./lineChart.js')
+var _ = require('lodash');
 var IndivLangView = function() {
 
 }
@@ -81,7 +82,7 @@ IndivLangView.prototype.render = function(language) {
     var linkGenerate = function(list, appendTo){ 
         list.forEach(function(item){
             var listItem = document.createElement('li');
-            listItem.innerHTML = `<a href = "${item}">Link</a>`; 
+            listItem.innerHTML = `<a href = "${_.values(item)}">${_.keys(item)}</a>`; 
             console.log("test", item)
             appendTo.appendChild(listItem);
             
