@@ -1,20 +1,23 @@
 .container {
-    width: 90%;
+    /* width: 90%; */
     position: relative;
     
 }
 
 #content-container {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    overflow-y:scroll; 
+    overflow-x:hidden; 
+    height:600px;
 }
 
 .header {
     clear: both;
     margin: 10px auto;
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
     width: 40%;
 }
@@ -50,7 +53,7 @@ pre:after {
 
 .sidebar li {
     background-color:#4E5D69;
-    border-bottom: black solid 2px;
+    /* border-bottom: black solid 2px; */
 }
 
 ul {
@@ -70,8 +73,8 @@ h4 li {
 
 .content {
     float: right;
-    width: 85%;
-    border: 1px solid black;
+    width: 100%;
+    /* border: 1px solid black; */
     padding: 5%;
 }
 
