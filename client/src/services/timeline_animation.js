@@ -8,7 +8,7 @@ var timelineAnimation = function(){
   var back = document.querySelector('#back');
   firstItem = document.querySelector("#timeline-list li:first-child")
   lastItem = document.querySelector("#timeline-list li:last-child")
-  var scrolling = 200;
+  var scrolling = 320;
 
   
   let counter = 0;
@@ -16,16 +16,16 @@ var timelineAnimation = function(){
 
   for (var i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener('click', function(){
-      //set next id so setTimeout will run if language id not set
+      //set next id so setTimeout will run if language is not set
+      //use the transform to set the position
       var nextId = 1;
-      console.log(document.querySelector('#language-id'))
-      console.log(this.id)
       if(document.querySelector('#language-id')){
         const modifier = (this.classList.contains("prev-arrow")) ? -1 : 1;
         nextId = parseInt(document.querySelector('#language-id').textContent) + modifier;
       }
       //stops scrolling the timeline if it's the first click on forward
       else if (!document.querySelector('#language-id') && this.id === "forward"){
+        back.disabled = true;
         return;
       }
         //disable both while waiting for animation
@@ -43,20 +43,29 @@ var timelineAnimation = function(){
         else{
           const timelineStyle = getComputedStyle(timeline);
           const timelineTransform = timelineStyle.getPropertyValue("-webkit-transform") || timeline.getPropertyValue("transform");
-          const values = parseInt(timelineTransform.split(',')[4]) + parseInt(`${sign}${scrolling}`);
-          timeline.style.transform = `translateX(${values}px)`;
+          console.log(timelineTransform.split(',')[4])
+          if(this.id === 'forward' || this.id === 'back'){
+            //needs to work on the first one
+            const values = ((nextId - 1) * 160) * -1;
+            timeline.style.transform = `translateX(${values}px)`;
+            console.log(values)
+          }
+          else{
+            const values = parseInt(timelineTransform.split(',')[4]) + parseInt(`${sign}${scrolling}`);
+            timeline.style.transform = `translateX(${values}px)`;
           //adding else from animation timeline
         }
-        counter++;
+      }
+      counter++;
 
-        setTimeout(() => {
-          nextId - 1 === 0 ? setBtnState(back) : setBtnState(back, false);
-          nextId + 1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
-          isElementInViewport(firstItem) ? setBtnState(prev) : setBtnState(prev, false);
-          isElementInViewport(lastItem) ? setBtnState(next) : setBtnState(next, false);
-        }, 1100);
+      setTimeout(() => {
+        nextId - 1 === 0 ? setBtnState(back) : setBtnState(back, false);
+        nextId + 1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
+        isElementInViewport(firstItem) ? setBtnState(prev) : setBtnState(prev, false);
+        isElementInViewport(lastItem) ? setBtnState(next) : setBtnState(next, false);
+      }, 1100);
 
-      });
+    });
   }
 
   function isElementInViewport(element) {

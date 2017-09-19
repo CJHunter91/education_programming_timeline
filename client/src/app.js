@@ -14,13 +14,13 @@ var app = function(){
     
 
     var buttonSetter = function (){
-    var forward = document.getElementById('forward');
-    var back = document.getElementById('back');
-    back.disabled = true;
+        var forward = document.getElementById('forward');
+        var back = document.getElementById('back');
+        back.disabled = true;
 
-    forward.addEventListener('click', buttonHandler);
-    back.addEventListener('click', buttonHandler);
-}
+        forward.addEventListener('click', buttonHandler);
+        back.addEventListener('click', buttonHandler);
+    }
     //sets forward and back to change view
     buttonSetter();
     //ready for history text request
