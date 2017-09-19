@@ -1,7 +1,7 @@
 
 var timelineAnimation = function(){
   var timeline = document.querySelector("#timeline ol");
-  var arrows = document.querySelectorAll('.arrows .arrow');
+  var arrows = document.querySelectorAll('.arrows .arrow, #forward, #back');
   var prev = document.querySelector('.arrows .prev-arrow');
   var next = document.querySelector('.arrows .next-arrow');
   firstItem = document.querySelector("#timeline-list li:first-child")
