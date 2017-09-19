@@ -59,7 +59,7 @@ var buttonHandler = function(){
         request.get(indivLangView.render);
         setBtnState(forward, false);
         setBtnState(back, false);
-
+        console.log(nextId)
         if(nextId + 1 === 13){
             setBtnState(forward);
         }
@@ -70,6 +70,7 @@ var buttonHandler = function(){
     else{
      var request = new AjaxRequest(url + parseInt(1));
      request.get(indivLangView.render); 
+    setBtnState(back, false);
  }
 
 }
