@@ -1,6 +1,8 @@
 var AjaxRequest = require('../services/ajax_request');
 var IndivLangView = require('./indiv_lang_view');
 var timeLineAnimation = require('../services/timeline_animation');
+var LineChart = require('./lineChart.js')
+
 var TimelineView = function() {
 
 }
@@ -22,10 +24,14 @@ TimelineView.prototype.render = function(data) {
       ajaxLangRequest.get(indivLangView.render);
     }.bind(this));
     //append to the list
+    new LineChart(data);
     ol.appendChild(li);
+    
   });
   section.appendChild(ol);
   timeLineAnimation();
+
+  
 } 
 
 
