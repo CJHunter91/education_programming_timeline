@@ -1,5 +1,6 @@
 var AjaxRequest = require('../services/ajax_request');
 var IndivLangView = require('./indiv_lang_view');
+var LineChart = require('./lineChart.js')
 var LanguagesView = function() {
 
 }
@@ -23,6 +24,7 @@ LanguagesView.prototype.render = function(data) {
     ul.appendChild(li);
   });
   section.appendChild(ul);
+  new LineChart(data);
 } 
 
 

@@ -13,15 +13,20 @@ var app = function(){
     var timelineView = new TimelineView();
     var languageView = new LanguageView();
     var textView = new TextView();
+
     //adds timeLineView
     ajaxRequest.get(timelineView.render)
     //adds timeline animation
     timeLineAnimation();
-    //pass the get a view callback
-    ajaxRequest.get(languageView.render);
+
 
     //ready for history text request
     ajaxTextRequest.get(textView.render);
+    //pass the get a view callback
+    ajaxRequest.get(languageView.render);
+
+    
+    
 
 
     
