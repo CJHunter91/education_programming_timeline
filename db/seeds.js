@@ -12,7 +12,7 @@ var languageData = [
   year: "1972",
   usedBy: "UNIX, embedded systems",
   usedFor: "Cross-platform programming, system programming, UNIX programming",
-  exampleCode: "#include<stdio.h>main(){printf('Hello World');}",
+  exampleCode: "#include<stdio.h>\n main()\n   {\n      printf('Hello World');\n\n  }",
   pros: ["Small clean language", "Very powerful", "Can be used in C++ programs"],
   cons: ["Difficult to learn", "Code can get messy quickly", "Needs to be compiled"],
   popularity: [
@@ -32,7 +32,7 @@ var languageData = [
     {"2017": 6.1}
   ],
   documentation: [{"C Docs": "http://devdocs.io/c/"}],
-  links: [""],
+  links: [{"C Tutorial": "https://www.cprogramming.com/tutorial/c-tutorial.html"}],
   icon: "https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg"
 },
 {
@@ -74,7 +74,7 @@ var languageData = [
   year: "1983",
   usedBy: "Adobe System, Mozilla, Google",
   usedFor: "Google Chromium, Adobe Illustrator",
-  exampleCode: " ",
+  exampleCode: "#include <iostream>\n\n int main()\n {\n    std::cout << 'Hello World!';\n }",
   pros: ["Combines the low level power of C with several layers of abstraction."],
   cons: ["C++ is extremely huge and its various features interact in horribly complex ways."],
   popularity: [
@@ -125,7 +125,7 @@ var languageData = [
     {"2017": 1.3}
   ],
   documentation: [{"Visual Basic Docs": "https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference"}],
-  links: [{"Youtube Tutorial": "https://www.youtube.com/watch?v=3FkWddODLno"}],
+  links: [{"YouTube Tutorial": "https://www.youtube.com/watch?v=3FkWddODLno"}],
   icon: "https://upload.wikimedia.org/wikipedia/en/e/e4/Visual_Basic_6.0_logo.png"
 },
 {
@@ -291,7 +291,7 @@ var languageData = [
   year: "2000",
   usedBy: "VisualStudio, Stack Overflow",
   usedFor: "Can be used with Microsofts .NET framework and is felxible enough to be used in most areas of software development",
-  exampleCode: " ",
+  exampleCode: "public class Hello\n {\n    public static void Main()\n    {\n       System.Console.WriteLine('Hello, World!');\n    }\n  }",
   pros: ["Can be statically or dynamically typed", "Similiar syntax to other C languages", "Fully integrated with the .NET library."],
   cons: ["Less efficent as it is interpreted"],
   popularity: [
@@ -341,8 +341,8 @@ var languageData = [
     {"2016": 1.1},
     {"2017": 1.4}
   ],
-  documentation: [{"TypeScript": "https://www.typescriptlang.org/docs/home.html"}],
-  links: [{"Youtube tutorial": "https://www.youtube.com/watch?v=xqYD8QXJX9U"}],
+  documentation: [{"TypeScript Docs": "https://www.typescriptlang.org/docs/home.html"}],
+  links: [{"YouTube Tutorial": "https://www.youtube.com/watch?v=xqYD8QXJX9U"}],
   icon: "http://www.typescriptlang.org/assets/images/icons/apple-touch-icon-180x180.png"
 
 },
