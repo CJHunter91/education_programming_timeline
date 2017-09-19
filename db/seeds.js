@@ -31,7 +31,7 @@ var languageData = [
     {"2016": 7.0},
     {"2017": 6.1}
   ],
-  documentation: ["http://devdocs.io/c/"],
+  documentation: [{"C Docs": "http://devdocs.io/c/"}],
   links: [""],
   icon: "https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg"
 },
@@ -62,8 +62,8 @@ var languageData = [
     {"2016": 4.4},
     {"2017": 3.5}
 ],
-  documentation: ["https://developer.apple.com/documentation/objectivec?language=objc"],
-  links: ["https://gist.github.com/imagin4ry/7024758", "https://www.tutorialspoint.com/objective_c/objective_c_useful_resources.htm"],
+  documentation: [{"Objective C Docs": "https://developer.apple.com/documentation/objectivec?language=objc"}],
+  links: [{"Useful Code Snippets": "https://gist.github.com/imagin4ry/7024758"}, {"Additional Information": "https://www.tutorialspoint.com/objective_c/objective_c_useful_resources.htm"}],
   icon: "http://sankeysolutions.com/wp-content/uploads/2017/02/Objective-C.png"
 },
 {
@@ -93,8 +93,8 @@ var languageData = [
     {"2016": 6.9},
     {"2017": 6.8}
     ],
-  documentation: ["https://isocpp.org/"],
-  links: ["https://en.wikipedia.org/wiki/C%2B%2B"],
+  documentation: [{"C++ Docs": "https://isocpp.org/"}],
+  links: [{"Wikipage": "https://en.wikipedia.org/wiki/C%2B%2B"}],
   icon: "http://www.freeiconspng.com/uploads/c--logo-icon-0.png"
 },
 {
@@ -124,8 +124,8 @@ var languageData = [
     {"2016": 1.6},
     {"2017": 1.3}
   ],
-  documentation: ["https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference"],
-  links: ["https://www.youtube.com/watch?v=3FkWddODLno"],
+  documentation: [{"Visual Basic Docs": "https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference"}],
+  links: [{"Youtube Tutorial": "https://www.youtube.com/watch?v=3FkWddODLno"}],
   icon: "https://upload.wikimedia.org/wikipedia/en/e/e4/Visual_Basic_6.0_logo.png"
 },
 {
@@ -155,15 +155,15 @@ var languageData = [
     {"2016": 13.8},
     {"2017": 17.0}
     ],
-  documentation: ["https://www.python.org/"],
-  links: ["https://en.wikipedia.org/wiki/Python_(programming_language)#Uses"],
+  documentation: [{"Python Docs": "https://www.python.org/"}],
+  links: [{"Wikipage": "https://en.wikipedia.org/wiki/Python_(programming_language)#Uses"}],
   icon: "https://www.python.org/static/opengraph-icon-200x200.png"
 },
 {
   id: 6,
   language: "Ruby",
-  author: "matz",
-  description: "Lorem Ipsum",
+  author: "Yukihiro 'Matz' Matsumoto",
+  description: "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. According to its creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp.[11] It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.",
   year: "1993",
   usedBy: "FreeAgent",
   usedFor: "Web applications",
@@ -186,8 +186,8 @@ var languageData = [
     {"2016": 2.1},
     {"2017": 1.6}
   ],
-  documentation: ["https://ruby-doc.org/core-2.4.1/"],
-  links: ["lorem"],
+  documentation: [{"Ruby Docs": "https://ruby-doc.org/core-2.4.1/"}],
+  links: [{"Ruby Tutorial": "http://rubylearning.com/satishtalim/tutorial.html"}],
   icon: "https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg"
 },
 {
@@ -217,8 +217,8 @@ var languageData = [
     {"2016": 9.7},
     {"2017": 8.7}
   ],
-  documentation: ["http://php.net/docs.php"],
-  links: [""],
+  documentation: [{"PHP Docs": "http://php.net/docs.php"}],
+  links: [{"PHP Tutorials": "http://www.homeandlearn.co.uk/php/php.html"}],
   icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
 },
 {
@@ -248,8 +248,8 @@ var languageData = [
     {"2016": 22.9},
     {"2017": 22.4}
   ],
-  documentation: ["http://docs.oracle.com/javase/8/docs/", 'http://docs.oracle.com/javase/8/docs/api/'],
-  links: ["https://www.tutorialspoint.com/java/java_basic_syntax.htm", "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html"],
+  documentation: [{"Java Docs": "http://docs.oracle.com/javase/8/docs/"}, {"Java APIs": "http://docs.oracle.com/javase/8/docs/api/"}],
+  links: [{"Java Basic Tutorial": "https://www.tutorialspoint.com/java/java_basic_syntax.htm"}, {"Java Tutorial": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html"}],
   icon: "http://www.nictsolutions.com/assets/images/ja.png"
 },
 {
@@ -279,8 +279,8 @@ var languageData = [
     {2016: 7.7},
     {2017: 8.0},
   ],
-  documentation: ["https://developer.mozilla.org/en-US/docs/Web/JavaScript"],
-  links: ["https://en.wikipedia.org/wiki/JavaScript"],
+  documentation: [{"JS Docs":"https://developer.mozilla.org/en-US/docs/Web/JavaScript"}],
+  links: [{"Wikipage": "https://en.wikipedia.org/wiki/JavaScript"}],
   icon: "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
 },
 {
@@ -310,8 +310,8 @@ var languageData = [
     {"2016": 8.5},
     {"2017": 8.1}
 ],
-  documentation: ["https://docs.microsoft.com/en-us/dotnet/csharp/"],
-  links: [""],
+  documentation: [{"C# Docs": "https://docs.microsoft.com/en-us/dotnet/csharp/"}],
+  links: [{"C# Tutorial": "http://csharp.net-tutorials.com/"}],
   icon: "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg"
 },
 {
@@ -341,8 +341,8 @@ var languageData = [
     {"2016": 1.1},
     {"2017": 1.4}
   ],
-  documentation: ["https://www.typescriptlang.org/docs/home.html"],
-  links: ["https://github.com/Microsoft/TypeScript/wiki/Useful-Links-for-TypeScript-Issue-Management", "https://www.youtube.com/watch?v=xqYD8QXJX9U"],
+  documentation: [{"TypeScript": "https://www.typescriptlang.org/docs/home.html"}],
+  links: [{"Youtube tutorial": "https://www.youtube.com/watch?v=xqYD8QXJX9U"}],
   icon: "http://www.typescriptlang.org/assets/images/icons/apple-touch-icon-180x180.png"
 
 },
@@ -373,8 +373,8 @@ var languageData = [
     {"2016": 3.0},
     {"2017": 2.9}
   ],
-  documentation: ["https://swift.org/documentation/", "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0"],
-  links: ["https://www.raywenderlich.com/143771/swift-tutorial-part-1-expressions-variables-constants", "http://www.skilledup.com/articles/6-best-free-swift-tutorials-programming-new-language"],
+  documentation: [{"Swift Docs": "https://swift.org/documentation/"}, {"Apple Swift Docs": "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0"}],
+  links: [{"Swift Tutorial": "https://www.raywenderlich.com/143771/swift-tutorial-part-1-expressions-variables-constants"}, {"Swift tutorial list": "http://www.skilledup.com/articles/6-best-free-swift-tutorials-programming-new-language"}],
   icon: "https://developer.apple.com/swift/images/swift-og.png"
 }
 ];
