@@ -1,5 +1,6 @@
 var AjaxRequest = require('../services/ajax_request');
 var LineChart = require('./lineChart.js')
+var _ = require('lodash');
 var IndivLangView = function() {
 
 }
@@ -39,8 +40,8 @@ IndivLangView.prototype.render = function(language) {
     author.innerText = "Created by: " +language[0].author;
     desc.innerText = language[0].description;
     // year.innerText = language[0].year;
-    usedBy.innerText = language[0].usedBy;
-    usedFor.innerText = language[0].usedFor;
+    usedBy.innerText = "Used by: "+ language[0].usedBy;
+    usedFor.innerText = "Used for: "+language[0].usedFor;
     exCode.innerText = language[0].exampleCode;
     proListTitle.innerText = "Pros:";
     conListTitle.innerText = "Cons:";
@@ -69,19 +70,19 @@ IndivLangView.prototype.render = function(language) {
 
     section.appendChild(exCode);
 
-    section.appendChild(proSection);
     section.appendChild(consSection);
+    section.appendChild(proSection);
     proSection.appendChild(proListTitle);
     consSection.appendChild(conListTitle);
 
     proListTitle.appendChild(prosList);
     conListTitle.appendChild(consList);
 
-    docLinksection.appendChild(docListTitle);
     linksSection.appendChild(linksTitle);
+    docLinksection.appendChild(docListTitle);
     
-    section.appendChild(docLinksection);
     section.appendChild(linksSection);
+    section.appendChild(docLinksection);
     
     docListTitle.appendChild(docsList);
     linksTitle.appendChild(linksList);
@@ -94,7 +95,7 @@ IndivLangView.prototype.render = function(language) {
     var linkGenerate = function(list, appendTo){ 
         list.forEach(function(item){
             var listItem = document.createElement('li');
-            listItem.innerHTML = `<a href = "${item}">Link</a>`; 
+            listItem.innerHTML = `<a href = "${_.values(item)}">${_.keys(item)}</a>`; 
             console.log("test", item)
             appendTo.appendChild(listItem);
             

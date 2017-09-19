@@ -14,28 +14,28 @@
     font-family: 'Asap Condensed', sans-serif;
 }
 
-#consSection{
+#proSection{
     overflow:hidden;
     width: 48%;
     font-style: italic;
     float: left;
 }
 
-#proSection {
+#consSection  {
+    overflow:hidden;
     width:48%;
     margin-left:30px;
     float:right;
     font-style: italic;
 }
 
-#linksSection{
-    overflow:hidden;
+#docLinksection{
     width: 48%;
     font-style: italic;
-    float: right;
+    float: left;
 }
 
-#docLinksection{
+#linksSection {
     width:48%;
     margin-left:30px;
     float:right;
