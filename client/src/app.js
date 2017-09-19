@@ -13,11 +13,13 @@ var app = function(){
     //call view pass 
 
 
+    //ready for history text request
+    ajaxTextRequest.get(textView.render);
     //pass the get a view callback
     ajaxRequest.get(languageView.render);
 
-    //ready for history text request
-    ajaxTextRequest.get(textView.render);
+    
+    
 
 
     
