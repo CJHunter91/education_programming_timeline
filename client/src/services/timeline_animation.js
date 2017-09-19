@@ -7,10 +7,11 @@ var timelineAnimation = function(){
   firstItem = document.querySelector("#timeline-list li:first-child")
   lastItem = document.querySelector("#timeline-list li:last-child")
   var scrolling = 280;
-  console.log(arrows);
 
   
   let counter = 0;
+  prev.disabled = true;
+
   for (var i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener('click', function(){
 
@@ -28,11 +29,9 @@ var timelineAnimation = function(){
           timeline.style.transform = `translateX(-${scrolling}px)`;
         }
         else{
-          console.log(counter)
           const timelineStyle = getComputedStyle(timeline);
           const timelineTransform = timelineStyle.getPropertyValue("-webkit-transform") || timeline.getPropertyValue("transform");
           const values = parseInt(timelineTransform.split(',')[4]) + parseInt(`${sign}${scrolling}`);
-          console.log( timelineStyle, timelineTransform, values);
           timeline.style.transform = `translateX(${values}px)`;
           //adding else from animation timeline
         }
@@ -59,6 +58,7 @@ var timelineAnimation = function(){
   function setBtnState(element, flag = true) {
     if (flag) {
       element.classList.add('disabled');
+      element.disabled = true
     } else {
       if (element.classList.contains('disabled')) {
         element.classList.remove('disabled');

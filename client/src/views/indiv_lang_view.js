@@ -6,7 +6,7 @@ var IndivLangView = function() {
 }
 
 IndivLangView.prototype.render = function(language) {
-
+    //set back and forward buttons
     var section = document.getElementById('main-view');
     //removes any elements from main view
     section.innerHTML = '';
@@ -18,6 +18,7 @@ IndivLangView.prototype.render = function(language) {
     var linksSection = document.createElement('section');
 
     //create elements
+    var id = document.createElement('p');
     var title = document.createElement('h2');
     var author = document.createElement('h4');
     var desc = document.createElement('p');
@@ -36,8 +37,11 @@ IndivLangView.prototype.render = function(language) {
     var linksTitle = document.createElement('h4');
 
     //adding data
+    id.innerText = language[0].id;
+    id.id = 'language-id';
+    id.style.display = 'none';
     title.innerText = language[0].language + " - " + language[0].year;
-    author.innerText = "Created by: " +language[0].author;
+    author.innerText = "Created by: " + language[0].author;
     desc.innerText = language[0].description;
     // year.innerText = language[0].year;
     usedBy.innerText = "Used by: "+ language[0].usedBy;
@@ -62,6 +66,7 @@ IndivLangView.prototype.render = function(language) {
     //appending tags
     section.appendChild(descriptionSection);
 
+    descriptionSection.appendChild(id);
     descriptionSection.appendChild(title);
     descriptionSection.appendChild(author);
     descriptionSection.appendChild(desc);
@@ -89,14 +94,12 @@ IndivLangView.prototype.render = function(language) {
 
     section.appendChild(popularity);
     // popularity.appendChild(chart);
-    console.log(language[0].pros);
     new LineChart(language);
 
     var linkGenerate = function(list, appendTo){ 
         list.forEach(function(item){
             var listItem = document.createElement('li');
             listItem.innerHTML = `<a href = "${_.values(item)}">${_.keys(item)}</a>`; 
-            console.log("test", item)
             appendTo.appendChild(listItem);
             
         })
@@ -106,11 +109,12 @@ IndivLangView.prototype.render = function(language) {
         list.forEach(function (item) {
             var listItem = document.createElement('li');
             listItem.innerHTML =item;
-            console.log("test", item)
             appendTo.appendChild(listItem);
 
         })
     }
+
+
 
     listGenerate(language[0].pros, prosList)
     listGenerate(language[0].cons, consList)

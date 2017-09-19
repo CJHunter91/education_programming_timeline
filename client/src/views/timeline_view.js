@@ -4,10 +4,10 @@ var timeLineAnimation = require('../services/timeline_animation');
 var LineChart = require('./lineChart.js')
 
 var TimelineView = function() {
-
 }
 
 TimelineView.prototype.render = function(data) {
+  var url = 'http://localhost:3000/api/languages/'
   var section = document.getElementById('timeline');
   var ol = document.getElementById('timeline-list');
   var indivLangView = new IndivLangView();
@@ -20,15 +20,18 @@ TimelineView.prototype.render = function(data) {
     //adds click handler to each language element
     li.addEventListener('click', function(event){
       event.preventDefault();
-      var ajaxLangRequest = new AjaxRequest('http://localhost:3000/api/languages/' + parseInt(language.id));
+      var ajaxLangRequest = new AjaxRequest(url + parseInt(language.id));
       ajaxLangRequest.get(indivLangView.render);
-    }.bind(this));
+    });
     //append to the list
     new LineChart(data);
     ol.appendChild(li);
     
   });
+
+
   section.appendChild(ol);
+  //set timeline animation
   timeLineAnimation();
 
   
