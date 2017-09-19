@@ -12,12 +12,14 @@ IndivLangView.prototype.render = function(language) {
     section.innerHTML = '';
     //creating containers for styling
     var descriptionSection = document.createElement('section');
-    var proConsSection = document.createElement('section');
+    var proSection = document.createElement('section');
+    var consSection = document.createElement('section');
+    var docLinksection = document.createElement('section');
     var linksSection = document.createElement('section');
 
     //create elements
     var title = document.createElement('h2');
-    var author = document.createElement('h3');
+    var author = document.createElement('h4');
     var desc = document.createElement('p');
     var year = document.createElement('p');
     var usedBy = document.createElement('p');
@@ -45,8 +47,11 @@ IndivLangView.prototype.render = function(language) {
     conListTitle.innerText = "Cons:";
     docListTitle.innerText = "Documentation:";
     linksTitle.innerText = "Useful Links:";
+
     popularity.id = "popChart";
-    proConsSection.id = "proConsSection";
+    proSection.id = "proSection";
+    consSection.id = "consSection";
+    docLinksection.id = "docLinksection";
     linksSection.id = "linksSection";
     descriptionSection.id = "descriptionSection";
     exCode.id = "exCode";
@@ -64,16 +69,24 @@ IndivLangView.prototype.render = function(language) {
     descriptionSection.appendChild(usedFor);
 
     section.appendChild(exCode);
-    section.appendChild(proConsSection);
-    section.appendChild(linksSection);
-    proConsSection.appendChild(proListTitle);
-    proConsSection.appendChild(conListTitle);
+
+    section.appendChild(consSection);
+    section.appendChild(proSection);
+    proSection.appendChild(proListTitle);
+    consSection.appendChild(conListTitle);
+
     proListTitle.appendChild(prosList);
     conListTitle.appendChild(consList);
-    linksSection.appendChild(docListTitle);
+
     linksSection.appendChild(linksTitle);
+    docLinksection.appendChild(docListTitle);
+    
+    section.appendChild(linksSection);
+    section.appendChild(docLinksection);
+    
     docListTitle.appendChild(docsList);
     linksTitle.appendChild(linksList);
+
     section.appendChild(popularity);
     // popularity.appendChild(chart);
     console.log(language[0].pros);

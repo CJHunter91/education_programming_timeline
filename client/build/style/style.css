@@ -4,6 +4,45 @@
     display: flex;
 }
 
+
+/* section set */
+#popChart{
+
+}
+
+#descriptionSection p{
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+#proSection{
+    overflow:hidden;
+    width: 48%;
+    font-style: italic;
+    float: left;
+}
+
+#consSection  {
+    overflow:hidden;
+    width:48%;
+    margin-left:30px;
+    float:right;
+    font-style: italic;
+}
+
+#docLinksection{
+    width: 48%;
+    font-style: italic;
+    float: left;
+}
+
+#linksSection {
+    width:48%;
+    margin-left:30px;
+    float:right;
+    font-style: italic;
+}
+
+
 #content-container {
     display: flex;
     width: 100%;
@@ -81,7 +120,7 @@ h4 li {
 
 
 #popChart {
-    width: 60%;
+    width: 90%;
 }
 
 #back, #forward {
