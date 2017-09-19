@@ -1,0 +1,82 @@
+.container {
+    width: 90%;
+    position: relative;
+    
+}
+
+#content-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+    clear: both;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 40%;
+}
+
+.sidebar{
+    text-align: center;
+    float: left;
+    width: 15%;
+    min-width: 155px;
+}
+
+pre {
+    background-color: #F1F19E;
+    overflow: auto;
+    white-space: pre-wrap; 
+    display: block;
+    
+    font-family: monospace;
+    margin: 1em 0;
+
+	overflow-y: hidden;
+	line-height: 20px;
+	border: 1px solid #777;
+}
+
+pre:after {
+  content: 'by The Trav ' attr(class);
+  display: block; text-align: right;
+  font-size: smaller;
+  padding-top: 5px;
+}
+    
+
+.sidebar li {
+    background-color:#4E5D69;
+    border-bottom: black solid 2px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
+
+h4 li {
+    font-size: 15px;
+}
+
+.content {
+    float: right;
+    width: 85%;
+    border: 1px solid black;
+    padding: 5%;
+}
+
+
+#popChart {
+    width: 60%;
+}
+
