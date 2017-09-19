@@ -34,6 +34,7 @@ pre {
     overflow: auto;
     white-space: pre-wrap; 
     display: block;
+    width: 65%;
     
     font-family: monospace;
     margin: 1em 0;

@@ -87,6 +87,8 @@ IndivLangView.prototype.render = function(language) {
     listGenerate(language[0].cons, consList)
     linkGenerate(language[0].documentation, docsList)
     linkGenerate(language[0].links, linksList)
+
+    
 }
 
 // IndivLangView.prototype.listGenerate = function(list, appendTo){ 
@@ -96,6 +98,17 @@ IndivLangView.prototype.render = function(language) {
 //         appendTo.appendChild(listItem);
 //     })
 // }
+
+IndivLangView.prototype.sideButton = function(){
+
+    var container = document.getElementsByClassName('container');
+
+    var leftButton = document.createElement('button');
+    var rightButton = document.createElement('button');
+
+    container.appendChild(leftButton);
+    container.appendChild(rightButton);
+}
 
 
 module.exports = IndivLangView;
