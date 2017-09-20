@@ -1,13 +1,6 @@
 .container {
-    /* width: 90%; */
     position: relative;
     display: flex;
-}
-
-
-/* section set */
-#popChart{
-
 }
 
 #descriptionSection p{
@@ -44,7 +37,6 @@
     font-style: italic;
 }
 
-
 #content-container {
     display: flex;
     width: 100%;
@@ -68,16 +60,8 @@
     clear: both;
     margin: 10px auto;
     padding: 10px;
-    /* border: 1px solid black; */
     text-align: center;
     width: 40%;
-}
-
-.sidebar{
-    text-align: center;
-    float: left;
-    width: 15%;
-    min-width: 155px;
 }
 
 pre {
@@ -101,12 +85,6 @@ pre:after {
   padding-top: 5px;
 }
     
-
-.sidebar li {
-    background-color:#4E5D69;
-    /* border-bottom: black solid 2px; */
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -125,10 +103,8 @@ h4 li {
 .content {
     float: right;
     width: 100%;
-    /* border: 10px solid black; */
     padding: 5%;
 }
-
 
 #popChart {
     width: 90%;
