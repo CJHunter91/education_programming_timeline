@@ -18,9 +18,7 @@ var timelineAnimation = function(){
 
   for (var i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener('click', function(){
-      //set next id so setTimeout will run if language is not set
-      //use the transform to set the position
-      var currentID = 1;
+
       //determines whether to remove or add scrolling
       const sign = (this.classList.contains("prev-arrow")) ? "" : "-";
       var modifier = 0;
@@ -37,23 +35,19 @@ var timelineAnimation = function(){
        back.disabled = true;
        forward.disabled = true;
      }
+     //if first click on forward set back to disabled and reset timeline
      else if(!document.querySelector('#language-id') && this.id === 'forward'){
+      timeline.style.transform = `translateX(0px)`;
       back.disabled = true;
-      console.log(this)
       return;
     }
         //disable both while waiting for animation
         prev.disabled = true;
         next.disabled = true;
-
-        // if(counter === 0){
-        //   timeline.style.transform = `translateX(-${scrolling}px)`;
-        // }
         const timelineStyle = getComputedStyle(timeline);
         const timelineTransform = timelineStyle.getPropertyValue("-webkit-transform") || timeline.getPropertyValue("transform");
+        //sets the timeline to move depending on the button clicked
         if(this.id === 'forward' || this.id === 'back'){
-            //needs to work on the first one
-            console.log(this.id);
             moveToID(nextID - 1);
           }
           else if(counter === 0){
@@ -62,12 +56,11 @@ var timelineAnimation = function(){
           else{
             const values = parseInt(timelineTransform.split(',')[4]) + parseInt(`${sign}${scrolling}`);
             timeline.style.transform = `translateX(${values}px)`;
-          //adding else from animation timeline
         }
         counter++;
-
+        //set timeout for animation to finish
         setTimeout(() => {
-          console.log(currentID);
+          //only changes disabled if language in view
           if(document.querySelector('#language-id')){
             console.log('running')
             nextID -1  === 0 ? setBtnState(back) : setBtnState(back, false);
