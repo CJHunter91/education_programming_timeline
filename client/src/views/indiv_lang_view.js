@@ -75,8 +75,8 @@ IndivLangView.prototype.render = function(language) {
 
     section.appendChild(exCode);
 
-    proConsSection.appendChild(consSection);
     proConsSection.appendChild(proSection);
+    proConsSection.appendChild(consSection);
     proSection.appendChild(proListTitle);
     consSection.appendChild(conListTitle);
 
@@ -86,11 +86,11 @@ IndivLangView.prototype.render = function(language) {
     section.appendChild(proConsSection);
     // proConsSection.appendChild(consList);
 
-    linksSection.appendChild(linksTitle);
     docLinksection.appendChild(docListTitle);
+    linksSection.appendChild(linksTitle);
 
-    link.appendChild(linksSection);
     link.appendChild(docLinksection);
+    link.appendChild(linksSection);
 
     section.appendChild(link);
 
