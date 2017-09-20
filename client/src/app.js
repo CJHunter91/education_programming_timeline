@@ -48,6 +48,7 @@ var buttonHandler = function(){
         request.get(indivLangView.render);
         timeline.setBtnState(forward, false);
         timeline.setBtnState(back, false);
+        console.log(nextId)
         if(nextId + 1 === 13){
             timeline.setBtnState(forward);
         }

@@ -22,6 +22,9 @@ TimelineView.prototype.render = function(data) {
       event.preventDefault();
       timeline = new Timeline();
       timeline.moveToID(language.id - 1);
+      if(language.id != 1){
+        timeline.setBtnState(timeline.back, false)
+      }
       var ajaxLangRequest = new AjaxRequest(url + parseInt(language.id));
       ajaxLangRequest.get(indivLangView.render);
     });

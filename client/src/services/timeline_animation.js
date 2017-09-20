@@ -9,6 +9,7 @@ var TimelineAnimation = function(){
   this.firstItem = document.querySelector("#timeline-list li:first-child")
   this.lastItem = document.querySelector("#timeline-list li:last-child")
   this.scrolling = 640;
+  this.currentID = 1;
   
 }
 
@@ -30,14 +31,14 @@ TimelineAnimation.prototype.runTimeline = function() {
        else if(event.path[0].id  == 'forward'){
          modifier = 1;
        }
-       currentID = parseInt(document.querySelector('#language-id').textContent);
-       nextID = currentID + modifier
+       this.currentID = parseInt(document.querySelector('#language-id').textContent)
+       nextID = this.currentID + modifier
        //stop forward and back buttons if there is an indiv language 
        this.back.disabled = true;
        this.forward.disabled = true;
      }
      //if first click on forward set back to disabled and reset timeline
-     else if(!document.querySelector('#language-id') && event.id === 'forward'){
+     else if(!document.querySelector('#language-id') && event.path[0].id === 'forward'){
       this.timeline.style.transform = `translateX(0px)`;
       this.back.disabled = true;
       return;
@@ -69,6 +70,7 @@ TimelineAnimation.prototype.runTimeline = function() {
 TimelineAnimation.prototype.setTimelineTimeout = function(){
   setTimeout(() => {
       //only changes disabled if language in view
+      console.log(this);
       if(document.querySelector('#language-id')){
         nextID - 1  === 0 ? this.setBtnState(this.back) : this.setBtnState(this.back, false);
         nextID + 1 === 13 ? this.setBtnState(this.forward) : this.setBtnState(this.forward, false);
