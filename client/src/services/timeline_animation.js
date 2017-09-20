@@ -46,9 +46,7 @@ var timelineAnimation = function(){
           console.log(timelineTransform.split(',')[4])
           if(this.id === 'forward' || this.id === 'back'){
             //needs to work on the first one
-            const values = ((nextId - 1) * 160) * -1;
-            timeline.style.transform = `translateX(${values}px)`;
-            console.log(values)
+            moveToID(nextId -1);
           }
           else{
             const values = parseInt(timelineTransform.split(',')[4]) + parseInt(`${sign}${scrolling}`);
@@ -78,7 +76,9 @@ var timelineAnimation = function(){
       );
   }
 
-  function setBtnState(element, flag = true) {
+}
+
+var setBtnState = function(element, flag = true) {
     if (flag) {
       element.classList.add('disabled');
       element.disabled = true
@@ -90,6 +90,16 @@ var timelineAnimation = function(){
     }
   }
 
-}
+  var moveToID =  function(id){
+    var timeline = document.querySelector("#timeline ol");
+    const values = (id * 160) * -1;
 
-module.exports = timelineAnimation;
+    timeline.style.transform = `translateX(${values}px)`;
+
+  }
+
+module.exports = {
+  timelineAnimation: timelineAnimation,
+  setBtnState: setBtnState, 
+  moveToID: moveToID
+};

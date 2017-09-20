@@ -1,5 +1,5 @@
 var AjaxRequest = require('./services/ajax_request');
-var timeLineAnimationMethods = require('./services/timeline_animation');
+var setBtnState = require('./services/timeline_animation').setBtnState;
 var LanguageView = require('./views/languages_view');
 var IndivLangView = require('./views/indiv_lang_view');
 var TimelineView = require('./views/timeline_view');
@@ -33,17 +33,17 @@ var app = function(){
  
 }
 
-var setBtnState = function(element, flag = true) {
-  if (flag) {
-    element.classList.add('disabled');
-    element.disabled = true
-  } else {
-    if (element.classList.contains('disabled')) {
-      element.classList.remove('disabled');
-    }
-    element.disabled = false;
-  }
-}
+// var setBtnState = function(element, flag = true) {
+//   if (flag) {
+//     element.classList.add('disabled');
+//     element.disabled = true
+//   } else {
+//     if (element.classList.contains('disabled')) {
+//       element.classList.remove('disabled');
+//     }
+//     element.disabled = false;
+//   }
+// }
 
 
 var buttonHandler = function(){
