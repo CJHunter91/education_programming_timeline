@@ -118,6 +118,10 @@ h3{
     text-align: center;
 }
 
+#main-view h3 {
+    padding-bottom: 10px;
+}
+
 pre {
     background-color: #F1F19E;
     overflow: auto;
