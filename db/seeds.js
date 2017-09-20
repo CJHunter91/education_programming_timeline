@@ -33,7 +33,7 @@ var languageData = [
   ],
   documentation: [{"C Docs": "http://devdocs.io/c/"}],
   links: [{"C Tutorial": "https://www.cprogramming.com/tutorial/c-tutorial.html"}],
-  icon: "https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg"
+  icon: "https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png"
 },
 {
   id: 2,
@@ -64,7 +64,7 @@ var languageData = [
 ],
   documentation: [{"Objective C Docs": "https://developer.apple.com/documentation/objectivec?language=objc"}],
   links: [{"Useful Code Snippets": "https://gist.github.com/imagin4ry/7024758"}, {"Additional Information": "https://www.tutorialspoint.com/objective_c/objective_c_useful_resources.htm"}],
-  icon: "http://sankeysolutions.com/wp-content/uploads/2017/02/Objective-C.png"
+  icon: "https://achievement-images.teamtreehouse.com/iOS_Objective_C.png"
 },
 {
   id: 3,
@@ -126,7 +126,7 @@ var languageData = [
   ],
   documentation: [{"Visual Basic Docs": "https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference"}],
   links: [{"YouTube Tutorial": "https://www.youtube.com/watch?v=3FkWddODLno"}],
-  icon: "https://upload.wikimedia.org/wikipedia/en/e/e4/Visual_Basic_6.0_logo.png"
+  icon: "http://www.diginetinfosystems.com/content/newimg/vb6.png"
 },
 {
   id: 5,
@@ -157,7 +157,7 @@ var languageData = [
     ],
   documentation: [{"Python Docs": "https://www.python.org/"}],
   links: [{"Wikipage": "https://en.wikipedia.org/wiki/Python_(programming_language)#Uses"}],
-  icon: "https://www.python.org/static/opengraph-icon-200x200.png"
+  icon: "http://www.pngall.com/wp-content/uploads/2016/05/Python-Logo-Free-Download-PNG.png"
 },
 {
   id: 6,
@@ -219,7 +219,7 @@ var languageData = [
   ],
   documentation: [{"PHP Docs": "http://php.net/docs.php"}],
   links: [{"PHP Tutorials": "http://www.homeandlearn.co.uk/php/php.html"}],
-  icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+  icon: "https://dt-cdn.net/assets/images/gfx/icons/tech/php-fbd1629392.svg"
 },
 {
   id: 8,
@@ -250,7 +250,7 @@ var languageData = [
   ],
   documentation: [{"Java Docs": "http://docs.oracle.com/javase/8/docs/"}, {"Java APIs": "http://docs.oracle.com/javase/8/docs/api/"}],
   links: [{"Java Basic Tutorial": "https://www.tutorialspoint.com/java/java_basic_syntax.htm"}, {"Java Tutorial": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html"}],
-  icon: "http://www.nictsolutions.com/assets/images/ja.png"
+  icon: "https://its.inside.tru.ca/files/2013/02/java.png"
 },
 {
   id: 9,
@@ -312,7 +312,7 @@ var languageData = [
 ],
   documentation: [{"C# Docs": "https://docs.microsoft.com/en-us/dotnet/csharp/"}],
   links: [{"C# Tutorial": "http://csharp.net-tutorials.com/"}],
-  icon: "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg"
+  icon: "http://devstickers.com/assets/img/pro/2p4i.png"
 },
 {
   id: 11,
