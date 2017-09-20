@@ -39,6 +39,9 @@ var LineChart = function(language){
                 pointStart: parseInt(_.keys(language[0].popularity[0]))
             }
         },
+        credits: {
+            enabled: false
+        },
         title: {
             text: "Popularity over time",
             style: {
