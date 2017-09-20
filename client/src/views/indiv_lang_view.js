@@ -20,7 +20,7 @@ IndivLangView.prototype.render = function(language) {
     var link = document.createElement('section');
 
     var id = document.createElement('p');
-    var title = document.createElement('h2');
+    var title = document.createElement('h3');
     var author = document.createElement('h4');
     var desc = document.createElement('p');
     var year = document.createElement('p');
@@ -40,7 +40,7 @@ IndivLangView.prototype.render = function(language) {
     id.innerText = language[0].id;
     id.id = 'language-id';
     id.style.display = 'none';
-    title.innerText = language[0].language + " - " + language[0].year;
+    title.innerHTML = language[0].language + " - " + language[0].year  + "<span>|</span>";;
     author.innerText = "Created by: " + language[0].author;
     desc.innerText = language[0].description;
     usedBy.innerText = "Used by: "+ language[0].usedBy;

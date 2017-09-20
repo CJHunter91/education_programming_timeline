@@ -4,7 +4,7 @@ db.text.drop();
 
 var textData = [
 {
-  title: "History", 
+  title: "Programming Lauguages Through The Ages", 
   text: "The history of computer programming contains many types of programming languages and some of the best computer programming languages of today have evolved from them.\n"+
   "As there are a couple thousand computer programming languages, below is a basic programming language history so you have a general idea of its evolution.\n\n"+
   "Computer Programming History: Where It All Started\n\n"+
@@ -30,7 +30,8 @@ var textData = [
   "Java\n"+
   "About a decade later, Java was developed. Much of its format was derived from C and C++ but had a more simple approach.\n\n"+
   "C#\n"+
-  "C# (pronounced C Sharp), was originally named Cool, which stood for “C-Like Object Oriented Language.” However, in 2000, when Microsoft made the project public, it was renamed to C# for trademark reasons. C# is intended to be a simple, modern, general-purpose, object-oriented programming language."
+  "C# (pronounced C Sharp), was originally named Cool, which stood for “C-Like Object Oriented Language.” However, in 2000, when Microsoft made the project public, it was renamed to C# for trademark reasons. C# is intended to be a simple, modern, general-purpose, object-oriented programming language.\n\n\n"+
+  "Below is a graph showing the popularity of the more commonly used languages since 2004 :"
 }
 ];
 

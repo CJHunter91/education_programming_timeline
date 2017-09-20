@@ -1,6 +1,41 @@
+/* ====== Title animation =========*/
+h3{
+    /* margin: 10px 0 20px 10px; */
+    margin: auto;
+    white-space: nowrap;
+    
+    overflow: hidden;
+    width: 25em;
+    animation: type 4s steps(45, end); 
+  }
+  
+  span{
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes type{ 
+    from { width: 0; } 
+  } 
+  
+  @keyframes type2{
+    0%{width: 0;}
+    50%{width: 50;}
+    100%{ width: 100; } 
+  } 
+  
+  @keyframes blink{
+    to{opacity: .0;}
+  }
+
+  /* ================== */
+
+  body {
+    height: 100vh;
+  }
 .container {
     position: relative;
     display: flex;
+    height: 75%;
 }
 
 #descriptionSection p{
@@ -43,7 +78,9 @@
     margin: auto;
     overflow-y:scroll; 
     overflow-x:hidden; 
-    height:550px;
+    /* height:550px; */
+    height: 75%;
+    
 }
 
 #links {
@@ -64,6 +101,18 @@
     width: 40%;
 }
 
+.content {
+    float: right;
+    width: 100%;
+    /* border: 10px solid black; */
+    padding: 5%;
+    text-align: center;
+}
+
+#main-view h3 {
+    padding-bottom: 10px;
+}
+
 pre {
     background-color: #F1F19E;
     overflow: auto;
@@ -72,11 +121,13 @@ pre {
     width: 65%;
     
     font-family: monospace;
-    margin: 1em 0;
+    margin: auto;
 
 	overflow-y: hidden;
 	line-height: 20px;
-	border: 1px solid #777;
+    border: 1px solid #777;
+    text-align: left;    
+    justify-content: left;
 }
 
 pre:after {
@@ -100,15 +151,6 @@ h4 li {
     font-size: 15px;
 }
 
-.content {
-    float: right;
-    width: 100%;
-    padding: 5%;
-}
-
-#popChart {
-    width: 90%;
-}
 
 #back, #forward {
     height: 25px;

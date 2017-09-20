@@ -7,7 +7,7 @@ TextView.prototype.render = function(data) {
   var paragraph = document.createElement('p');
   var popChart = document.createElement('section')
 
-  heading.innerText = data[0].title;
+  heading.innerHTML = data[0].title + "<span>|</span>";
   paragraph.innerText = data[0].text;
   popChart.id = "popChart";
   popChart.classList.add('fullChart');
