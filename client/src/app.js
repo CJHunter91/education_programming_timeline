@@ -8,7 +8,7 @@ var TextView = require('./views/text_view');
 var app = function(){
 
     var ajaxRequest = new AjaxRequest('http://localhost:3000/api/languages');
-    var ajaxTextRequest = new AjaxRequest('http://localhost:3000/api/text/History');
+    var ajaxTextRequest = new AjaxRequest('http://localhost:3000/api/text/Programming%20Lauguages%20Through%20The%20Ages');
     var timelineView = new TimelineView();
     var textView = new TextView();
     
