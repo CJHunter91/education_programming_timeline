@@ -24,7 +24,7 @@
 #consSection  {
     overflow:hidden;
     width:48%;
-    /* margin-left:30px; */
+    margin-left:10px;
     float:right;
     font-style: italic;
 }
@@ -39,7 +39,7 @@
 #linksSection {
     overflow:hidden;
     width:48%;
-    /* margin-left:30px; */
+    margin-left:10px;
     float:right;
     font-style: italic;
 }
