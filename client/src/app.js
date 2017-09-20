@@ -1,5 +1,5 @@
 var AjaxRequest = require('./services/ajax_request');
-var setBtnState = require('./services/timeline_animation').setBtnState;
+var Timeline = require('./services/timeline_animation');
 var LanguageView = require('./views/languages_view');
 var IndivLangView = require('./views/indiv_lang_view');
 var TimelineView = require('./views/timeline_view');
@@ -35,6 +35,7 @@ var app = function(){
 
 
 var buttonHandler = function(){
+    timeline = new Timeline();
     var forward = document.getElementById('forward');
     var back = document.getElementById('back');
     var indivLangView = new IndivLangView();
@@ -45,19 +46,19 @@ var buttonHandler = function(){
         var nextId = parseInt(document.querySelector('#language-id').textContent) + modifier;
         var request = new AjaxRequest(url + parseInt(nextId));
         request.get(indivLangView.render);
-        setBtnState(forward, false);
-        setBtnState(back, false);
+        timeline.setBtnState(forward, false);
+        timeline.setBtnState(back, false);
         if(nextId + 1 === 13){
-            setBtnState(forward);
+            timeline.setBtnState(forward);
         }
         else if(nextId - 1 === 0){
-            setBtnState(back);
+            timeline.setBtnState(back);
         }
     }
     else{
      var request = new AjaxRequest(url + parseInt(1));
      request.get(indivLangView.render); 
-    setBtnState(back, false);
+    timeline.setBtnState(back, false);
  }
 
 }
