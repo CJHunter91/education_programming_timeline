@@ -21,16 +21,11 @@ var app = function(){
         forward.addEventListener('click', buttonHandler);
         back.addEventListener('click', buttonHandler);
     }
-    //sets forward and back to change view
-    buttonSetter();
-    //ready for history text request
-    //adds timeLineView
-    ajaxTextRequest.get(textView.render);
 
+    buttonSetter();
+
+    ajaxTextRequest.get(textView.render);
     ajaxRequest.get(timelineView.render)
-    //pass the get a view callback
-    // ajaxRequest.get(languageView.render);
- 
 }
 
 

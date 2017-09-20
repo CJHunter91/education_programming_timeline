@@ -1,15 +1,6 @@
 var _ = require('lodash');
 var LineChart = function(language){
     var container = document.getElementById('popChart')
-    // var dataFill = function(){
-    //     var popArray = []
-
-    //     for (var year of language[0].popularity){
-    //         var popDetails = _.values(year)
-    //          popArray.push(popDetails); 
-    //     }
-    //     return popArray
-    // }
 
     var dataFill = function(){
         var popArray = []
