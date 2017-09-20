@@ -6,11 +6,11 @@ var IndivLangView = function() {
 }
 
 IndivLangView.prototype.render = function(language) {
-    //set back and forward buttons
+
     var section = document.getElementById('main-view');
-    //removes any elements from main view
+
     section.innerHTML = '';
-    //creating containers for styling
+
     var descriptionSection = document.createElement('section');
     var proSection = document.createElement('section');
     var consSection = document.createElement('section');
@@ -19,7 +19,6 @@ IndivLangView.prototype.render = function(language) {
     var linksSection = document.createElement('section');
     var link = document.createElement('section');
 
-    //create elements
     var id = document.createElement('p');
     var title = document.createElement('h3');
     var author = document.createElement('h4');
@@ -38,14 +37,12 @@ IndivLangView.prototype.render = function(language) {
     var docListTitle = document.createElement('h4');
     var linksTitle = document.createElement('h4');
 
-    //adding data
     id.innerText = language[0].id;
     id.id = 'language-id';
     id.style.display = 'none';
     title.innerHTML = language[0].language + " - " + language[0].year  + "<span>|</span>";;
     author.innerText = "Created by: " + language[0].author;
     desc.innerText = language[0].description;
-    // year.innerText = language[0].year;
     usedBy.innerText = "Used by: "+ language[0].usedBy;
     usedFor.innerText = "Used for: "+language[0].usedFor;
     exCode.innerText = language[0].exampleCode;
@@ -63,14 +60,8 @@ IndivLangView.prototype.render = function(language) {
     exCode.id = "exCode";
     proConsSection.id = "proCons";
     link.id = "links"
-    
 
-
-    
-
-    //appending tags
     section.appendChild(descriptionSection);
-
     descriptionSection.appendChild(id);
     descriptionSection.appendChild(title);
     descriptionSection.appendChild(author);
@@ -89,7 +80,6 @@ IndivLangView.prototype.render = function(language) {
     conListTitle.appendChild(consList);
 
     section.appendChild(proConsSection);
-    // proConsSection.appendChild(consList);
 
     docLinksection.appendChild(docListTitle);
     linksSection.appendChild(linksTitle);
@@ -98,16 +88,12 @@ IndivLangView.prototype.render = function(language) {
     link.appendChild(linksSection);
 
     section.appendChild(link);
-
-    
-    // section.appendChild(linksSection);
-    // section.appendChild(docLinksection);
-    
+  
     docListTitle.appendChild(docsList);
     linksTitle.appendChild(linksList);
 
     section.appendChild(popularity);
-    // popularity.appendChild(chart);
+
     new LineChart(language);
 
     var linkGenerate = function(list, appendTo){ 
@@ -128,36 +114,11 @@ IndivLangView.prototype.render = function(language) {
         })
     }
 
-
-
     listGenerate(language[0].pros, prosList)
     listGenerate(language[0].cons, consList)
     linkGenerate(language[0].documentation, docsList)
     linkGenerate(language[0].links, linksList)
-
-    
 }
-
-// IndivLangView.prototype.listGenerate = function(list, appendTo){ 
-//     list.forEach(function(item){
-//         var listItem = document.createElement('li');
-//         listItem.innerText = item; 
-//         appendTo.appendChild(listItem);
-//     })
-// }
-
-//side button for main container
-IndivLangView.prototype.sideButton = function(){
-
-    var container = document.getElementsByClassName('container');
-
-    var leftButton = document.createElement('button');
-    var rightButton = document.createElement('button');
-
-    container.appendChild(leftButton);
-    container.appendChild(rightButton);
-}
-
 
 module.exports = IndivLangView;
 

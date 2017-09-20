@@ -35,7 +35,10 @@ h3{
 .container {
     position: relative;
     display: flex;
+<<<<<<< HEAD
     height: 75%;
+=======
+>>>>>>> develop
 }
 
 #descriptionSection p{
@@ -72,7 +75,6 @@ h3{
     font-style: italic;
 }
 
-
 #content-container {
     display: flex;
     width: 100%;
@@ -98,11 +100,11 @@ h3{
     clear: both;
     margin: 10px auto;
     padding: 10px;
-    /* border: 1px solid black; */
     text-align: center;
     width: 40%;
 }
 
+<<<<<<< HEAD
 .sidebar{
     text-align: center;
     float: left;
@@ -122,6 +124,8 @@ h3{
     padding-bottom: 10px;
 }
 
+=======
+>>>>>>> develop
 pre {
     background-color: #F1F19E;
     overflow: auto;
@@ -145,12 +149,6 @@ pre:after {
   padding-top: 5px;
 }
     
-
-.sidebar li {
-    background-color:#4E5D69;
-    /* border-bottom: black solid 2px; */
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -166,7 +164,19 @@ h4 li {
     font-size: 15px;
 }
 
+<<<<<<< HEAD
 
+=======
+.content {
+    float: right;
+    width: 100%;
+    padding: 5%;
+}
+
+#popChart {
+    width: 90%;
+}
+>>>>>>> develop
 
 #back, #forward {
     height: 25px;
