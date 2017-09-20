@@ -26,26 +26,25 @@ var timelineAnimation = function(){
       var modifier = 0;
       if(document.querySelector('#language-id')){
         if(this.id == 'back'){
-           modifier = -1;
-        }
-        else if(this.id == 'forward'){
-           modifier = 1;
-        }
-        currentID = parseInt(document.querySelector('#language-id').textContent);
-        nextID = currentID + modifier
-        console.log('currentID', currentID)
-        console.log('nextID', nextID)
-      }
-      else if(!document.querySelector('#language-id') && this.id === 'forward'){
-        back.disabled = true;
-        console.log(this)
-        return;
-      }
+         modifier = -1;
+       }
+       else if(this.id == 'forward'){
+         modifier = 1;
+       }
+       currentID = parseInt(document.querySelector('#language-id').textContent);
+       nextID = currentID + modifier
+       //stop forward and back buttons if there is an indiv language 
+       back.disabled = true;
+       forward.disabled = true;
+     }
+     else if(!document.querySelector('#language-id') && this.id === 'forward'){
+      back.disabled = true;
+      console.log(this)
+      return;
+    }
         //disable both while waiting for animation
         prev.disabled = true;
         next.disabled = true;
-        forward.disabled = true;
-        back.disabled = true;
 
         // if(counter === 0){
         //   timeline.style.transform = `translateX(-${scrolling}px)`;
@@ -69,8 +68,11 @@ var timelineAnimation = function(){
 
         setTimeout(() => {
           console.log(currentID);
-          nextID -1  === 0 ? setBtnState(back) : setBtnState(back, false);
-          nextID +1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
+          if(document.querySelector('#language-id')){
+            console.log('running')
+            nextID -1  === 0 ? setBtnState(back) : setBtnState(back, false);
+            nextID +1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
+          }
           isElementInViewport(firstItem) ? setBtnState(prev) : setBtnState(prev, false);
           isElementInViewport(lastItem) ? setBtnState(next) : setBtnState(next, false);
         }, 1100);
