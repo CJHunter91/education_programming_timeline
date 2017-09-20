@@ -59,19 +59,12 @@ var timelineAnimation = function(){
         }
         counter++;
         //set timeout for animation to finish
-        setTimeout(() => {
-          //only changes disabled if language in view
-          if(document.querySelector('#language-id')){
-            console.log('running')
-            nextID -1  === 0 ? setBtnState(back) : setBtnState(back, false);
-            nextID +1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
-          }
-          isElementInViewport(firstItem) ? setBtnState(prev) : setBtnState(prev, false);
-          isElementInViewport(lastItem) ? setBtnState(next) : setBtnState(next, false);
-        }, 1100);
+        setTimelineTimeout();
 
       });
   }
+
+
 
   function isElementInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -83,6 +76,18 @@ var timelineAnimation = function(){
       );
   }
 
+}
+
+var setTimelineTimeout = function(){
+  setTimeout(() => {
+      //only changes disabled if language in view
+      if(document.querySelector('#language-id')){
+        nextID - 1  === 0 ? setBtnState(back) : setBtnState(back, false);
+        nextID + 1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
+      }
+      isElementInViewport(firstItem) ? setBtnState(prev) : setBtnState(prev, false);
+      isElementInViewport(lastItem) ? setBtnState(next) : setBtnState(next, false);
+    }, 1100);
 }
 
 var setBtnState = function(element, flag = true) {
@@ -100,9 +105,8 @@ var setBtnState = function(element, flag = true) {
 var moveToID =  function(id){
   var timeline = document.querySelector("#timeline ol");
   const values = (id * 160) * -1;
-
+  setTimelineTimeout();
   timeline.style.transform = `translateX(${values}px)`;
-
 }
 
 module.exports = {
