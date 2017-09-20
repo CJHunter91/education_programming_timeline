@@ -8,7 +8,7 @@ var timelineAnimation = function(){
   var back = document.querySelector('#back');
   firstItem = document.querySelector("#timeline-list li:first-child")
   lastItem = document.querySelector("#timeline-list li:last-child")
-  var scrolling = 320;
+  var scrolling = 640;
 
   
   let counter = 0;
@@ -20,15 +20,25 @@ var timelineAnimation = function(){
     arrows[i].addEventListener('click', function(){
       //set next id so setTimeout will run if language is not set
       //use the transform to set the position
-      var nextId = 1;
+      var currentID = 1;
       //determines whether to remove or add scrolling
       const sign = (this.classList.contains("prev-arrow")) ? "" : "-";
-
+      var modifier = 0;
       if(document.querySelector('#language-id')){
-        const modifier = (this.classList.contains("prev-arrow")) ? -1 : 1;
-        nextId = parseInt(document.querySelector('#language-id').textContent) + modifier;
+        if(this.id == 'back'){
+           modifier = -1;
+        }
+        else if(this.id == 'forward'){
+           modifier = 1;
+        }
+        currentID = parseInt(document.querySelector('#language-id').textContent);
+        nextID = currentID + modifier
+        console.log('currentID', currentID)
+        console.log('nextID', nextID)
       }
-      else{
+      else if(!document.querySelector('#language-id') && this.id === 'forward'){
+        back.disabled = true;
+        console.log(this)
         return;
       }
         //disable both while waiting for animation
@@ -40,30 +50,32 @@ var timelineAnimation = function(){
         // if(counter === 0){
         //   timeline.style.transform = `translateX(-${scrolling}px)`;
         // }
-        if(true){
-          const timelineStyle = getComputedStyle(timeline);
-          const timelineTransform = timelineStyle.getPropertyValue("-webkit-transform") || timeline.getPropertyValue("transform");
-          if(this.id === 'forward' || this.id === 'back'){
+        const timelineStyle = getComputedStyle(timeline);
+        const timelineTransform = timelineStyle.getPropertyValue("-webkit-transform") || timeline.getPropertyValue("transform");
+        if(this.id === 'forward' || this.id === 'back'){
             //needs to work on the first one
             console.log(this.id);
-            moveToID(nextId -1);
+            moveToID(nextID - 1);
+          }
+          else if(counter === 0){
+            timeline.style.transform = `translateX(-${scrolling}px)`;
           }
           else{
             const values = parseInt(timelineTransform.split(',')[4]) + parseInt(`${sign}${scrolling}`);
             timeline.style.transform = `translateX(${values}px)`;
           //adding else from animation timeline
         }
-      }
-      counter++;
+        counter++;
 
-      setTimeout(() => {
-        nextId - 1 === 0 ? setBtnState(back) : setBtnState(back, false);
-        nextId + 1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
-        isElementInViewport(firstItem) ? setBtnState(prev) : setBtnState(prev, false);
-        isElementInViewport(lastItem) ? setBtnState(next) : setBtnState(next, false);
-      }, 1100);
+        setTimeout(() => {
+          console.log(currentID);
+          nextID -1  === 0 ? setBtnState(back) : setBtnState(back, false);
+          nextID +1 === 13 ? setBtnState(forward) : setBtnState(forward, false);
+          isElementInViewport(firstItem) ? setBtnState(prev) : setBtnState(prev, false);
+          isElementInViewport(lastItem) ? setBtnState(next) : setBtnState(next, false);
+        }, 1100);
 
-    });
+      });
   }
 
   function isElementInViewport(element) {
@@ -79,24 +91,24 @@ var timelineAnimation = function(){
 }
 
 var setBtnState = function(element, flag = true) {
-    if (flag) {
-      element.classList.add('disabled');
-      element.disabled = true
-    } else {
-      if (element.classList.contains('disabled')) {
-        element.classList.remove('disabled');
-      }
-      element.disabled = false;
+  if (flag) {
+    element.classList.add('disabled');
+    element.disabled = true
+  } else {
+    if (element.classList.contains('disabled')) {
+      element.classList.remove('disabled');
     }
+    element.disabled = false;
   }
+}
 
-  var moveToID =  function(id){
-    var timeline = document.querySelector("#timeline ol");
-    const values = (id * 160) * -1;
+var moveToID =  function(id){
+  var timeline = document.querySelector("#timeline ol");
+  const values = (id * 160) * -1;
 
-    timeline.style.transform = `translateX(${values}px)`;
+  timeline.style.transform = `translateX(${values}px)`;
 
-  }
+}
 
 module.exports = {
   timelineAnimation: timelineAnimation,

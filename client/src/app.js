@@ -47,7 +47,6 @@ var buttonHandler = function(){
         request.get(indivLangView.render);
         setBtnState(forward, false);
         setBtnState(back, false);
-        console.log(nextId)
         if(nextId + 1 === 13){
             setBtnState(forward);
         }
