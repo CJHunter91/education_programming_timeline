@@ -24,20 +24,22 @@
 #consSection  {
     overflow:hidden;
     width:48%;
-    margin-left:30px;
+    /* margin-left:30px; */
     float:right;
     font-style: italic;
 }
 
 #docLinksection{
+    overflow:hidden;
     width: 48%;
     font-style: italic;
     float: left;
 }
 
 #linksSection {
+    overflow:hidden;
     width:48%;
-    margin-left:30px;
+    /* margin-left:30px; */
     float:right;
     font-style: italic;
 }
@@ -50,6 +52,16 @@
     overflow-y:scroll; 
     overflow-x:hidden; 
     height:550px;
+}
+
+#links {
+    display: inline-flex;
+    width: 100%;
+}
+
+#proCons{
+    display: inline-flex;
+    width: 100%;
 }
 
 .header {
@@ -84,7 +96,6 @@ pre {
 }
 
 pre:after {
-  content: 'by The Trav ' attr(class);
   display: block; text-align: right;
   font-size: smaller;
   padding-top: 5px;
