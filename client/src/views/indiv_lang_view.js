@@ -14,8 +14,10 @@ IndivLangView.prototype.render = function(language) {
     var descriptionSection = document.createElement('section');
     var proSection = document.createElement('section');
     var consSection = document.createElement('section');
+    var proConsSection = document.createElement('section');
     var docLinksection = document.createElement('section');
     var linksSection = document.createElement('section');
+    var link = document.createElement('section');
 
     //create elements
     var title = document.createElement('h2');
@@ -55,6 +57,9 @@ IndivLangView.prototype.render = function(language) {
     linksSection.id = "linksSection";
     descriptionSection.id = "descriptionSection";
     exCode.id = "exCode";
+    proConsSection.id = "proCons";
+    link.id = "links"
+    
 
 
     
@@ -70,19 +75,28 @@ IndivLangView.prototype.render = function(language) {
 
     section.appendChild(exCode);
 
-    section.appendChild(consSection);
-    section.appendChild(proSection);
+    proConsSection.appendChild(proSection);
+    proConsSection.appendChild(consSection);
     proSection.appendChild(proListTitle);
     consSection.appendChild(conListTitle);
 
     proListTitle.appendChild(prosList);
     conListTitle.appendChild(consList);
 
-    linksSection.appendChild(linksTitle);
+    section.appendChild(proConsSection);
+    // proConsSection.appendChild(consList);
+
     docLinksection.appendChild(docListTitle);
+    linksSection.appendChild(linksTitle);
+
+    link.appendChild(docLinksection);
+    link.appendChild(linksSection);
+
+    section.appendChild(link);
+
     
-    section.appendChild(linksSection);
-    section.appendChild(docLinksection);
+    // section.appendChild(linksSection);
+    // section.appendChild(docLinksection);
     
     docListTitle.appendChild(docsList);
     linksTitle.appendChild(linksList);
