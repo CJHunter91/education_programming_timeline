@@ -13,19 +13,22 @@ var timelineAnimation = function(){
   
   let counter = 0;
   prev.disabled = true;
+  back.disabled = true;
+
 
   for (var i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener('click', function(){
       //set next id so setTimeout will run if language is not set
       //use the transform to set the position
       var nextId = 1;
+      //determines whether to remove or add scrolling
+      const sign = (this.classList.contains("prev-arrow")) ? "" : "-";
+
       if(document.querySelector('#language-id')){
         const modifier = (this.classList.contains("prev-arrow")) ? -1 : 1;
         nextId = parseInt(document.querySelector('#language-id').textContent) + modifier;
       }
-      //stops scrolling the timeline if it's the first click on forward
-      else if (!document.querySelector('#language-id') && this.id === "forward"){
-        back.disabled = true;
+      else{
         return;
       }
         //disable both while waiting for animation
@@ -34,18 +37,15 @@ var timelineAnimation = function(){
         forward.disabled = true;
         back.disabled = true;
 
-        //determines whether to remove or add scrolling
-        const sign = (this.classList.contains("prev-arrow")) ? "" : "-";
-
-        if(counter === 0){
-          timeline.style.transform = `translateX(-${scrolling}px)`;
-        }
-        else{
+        // if(counter === 0){
+        //   timeline.style.transform = `translateX(-${scrolling}px)`;
+        // }
+        if(true){
           const timelineStyle = getComputedStyle(timeline);
           const timelineTransform = timelineStyle.getPropertyValue("-webkit-transform") || timeline.getPropertyValue("transform");
-          console.log(timelineTransform.split(',')[4])
           if(this.id === 'forward' || this.id === 'back'){
             //needs to work on the first one
+            console.log(this.id);
             moveToID(nextId -1);
           }
           else{

@@ -33,18 +33,6 @@ var app = function(){
  
 }
 
-// var setBtnState = function(element, flag = true) {
-//   if (flag) {
-//     element.classList.add('disabled');
-//     element.disabled = true
-//   } else {
-//     if (element.classList.contains('disabled')) {
-//       element.classList.remove('disabled');
-//     }
-//     element.disabled = false;
-//   }
-// }
-
 
 var buttonHandler = function(){
     var forward = document.getElementById('forward');
