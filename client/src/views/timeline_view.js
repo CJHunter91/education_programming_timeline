@@ -24,6 +24,7 @@ TimelineView.prototype.render = function(data) {
       timeline.moveToID(language.id - 1);
       if(language.id != 1){
         timeline.setBtnState(timeline.back, false)
+        timeline.setBtnState(timeline.prev, false)
       }
       var ajaxLangRequest = new AjaxRequest(url + parseInt(language.id));
       ajaxLangRequest.get(indivLangView.render);
