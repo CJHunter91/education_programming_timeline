@@ -157,7 +157,7 @@ var languageData = [
     ],
   documentation: [{"Python Docs": "https://www.python.org/"}],
   links: [{"Wikipage": "https://en.wikipedia.org/wiki/Python_(programming_language)#Uses"}],
-  icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/2000px-Python.svg.png"
+  icon: "http://www.pngall.com/wp-content/uploads/2016/05/Python-Logo-Free-Download-PNG.png"
 },
 {
   id: 6,
@@ -250,7 +250,7 @@ var languageData = [
   ],
   documentation: [{"Java Docs": "http://docs.oracle.com/javase/8/docs/"}, {"Java APIs": "http://docs.oracle.com/javase/8/docs/api/"}],
   links: [{"Java Basic Tutorial": "https://www.tutorialspoint.com/java/java_basic_syntax.htm"}, {"Java Tutorial": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html"}],
-  icon: "https://logos-download.com/wp-content/uploads/2016/10/Java_logo_icon.png"
+  icon: "https://its.inside.tru.ca/files/2013/02/java.png"
 },
 {
   id: 9,
