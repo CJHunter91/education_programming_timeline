@@ -10,7 +10,6 @@ var TimelineAnimation = function(){
   this.lastItem = document.querySelector("#timeline-list li:last-child")
   this.scrolling = 640;
   this.currentID = 1;
-  
 }
 
 TimelineAnimation.prototype.runTimeline = function() {
@@ -22,13 +21,14 @@ TimelineAnimation.prototype.runTimeline = function() {
   for (var i = 0; i < this.arrows.length; i++) {
     this.arrows[i].addEventListener('click', function(event){
       //determines whether to remove or add scrolling
+      console.log(event)
       const sign = (event.path[1].classList.contains("prev-arrow")) ? "" : "-";
       var modifier = 0;
       if(document.querySelector('#language-id')){
-        if(event.path[0].id  == 'back'){
+        if(event.path[1].id  == 'back'){
          modifier = -1;
        }
-       else if(event.path[0].id  == 'forward'){
+       else if(event.path[1].id  == 'forward'){
          modifier = 1;
        }
        this.currentID = parseInt(document.querySelector('#language-id').textContent)
@@ -38,7 +38,7 @@ TimelineAnimation.prototype.runTimeline = function() {
        this.forward.disabled = true;
      }
      //if first click on forward set back to disabled and reset timeline
-     else if(!document.querySelector('#language-id') && event.path[0].id === 'forward'){
+     else if(!document.querySelector('#language-id') && event.path[1].id === 'forward'){
       this.timeline.style.transform = `translateX(0px)`;
       this.back.disabled = true;
       return;
@@ -49,7 +49,8 @@ TimelineAnimation.prototype.runTimeline = function() {
         const timelineStyle = getComputedStyle(this.timeline);
         const timelineTransform = timelineStyle.getPropertyValue("-webkit-transform") || this.timeline.getPropertyValue("transform");
         //sets the timeline to move depending on the button clicked
-        if(event.path[0].id === 'forward' || event.path[0].id === 'back'){
+        console.log(event.path)
+        if(event.path[1].id === 'forward' || event.path[1].id === 'back'){
             this.moveToID(nextID - 1);
           }
           else if(counter === 0){
