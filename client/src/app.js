@@ -11,6 +11,7 @@ var app = function(){
     var ajaxTextRequest = new AjaxRequest('http://localhost:3000/api/text/Programming%20Lauguages%20Through%20The%20Ages');
     var timelineView = new TimelineView();
     var textView = new TextView();
+    var homeButton = document.querySelector('#homebutton');
     
 
     var buttonSetter = function (){
@@ -26,6 +27,9 @@ var app = function(){
 
     ajaxTextRequest.get(textView.render);
     ajaxRequest.get(timelineView.render)
+
+    homeButton.addEventListener("click", resetHome)
+    
 }
 
 
@@ -57,6 +61,14 @@ var buttonHandler = function(){
     timeline.setBtnState(back, false);
  }
 
+}
+
+var resetHome = function(){
+    var section = document.querySelector('#main-view')
+    var timelineIcons = document.querySelector('#timeline-list')
+    section.innerHTML = '';
+    timelineIcons.innerHTML = '';
+    app()
 }
 
 window.addEventListener('load', app);

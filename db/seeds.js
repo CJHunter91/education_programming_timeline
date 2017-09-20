@@ -157,7 +157,7 @@ var languageData = [
     ],
   documentation: [{"Python Docs": "https://www.python.org/"}],
   links: [{"Wikipage": "https://en.wikipedia.org/wiki/Python_(programming_language)#Uses"}],
-  icon: "http://www.pngall.com/wp-content/uploads/2016/05/Python-Logo-Free-Download-PNG.png"
+  icon: "https://www.google-melange.com/archive/gsoc/2015/orgs/python/logo-200.png"
 },
 {
   id: 6,

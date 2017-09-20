@@ -157,3 +157,13 @@ h4 li {
     margin: auto;
 }
 
+#popChart {
+    width: 90%;
+    margin: auto;
+}
+
+button {
+    background-color: rgba(0,0,0,0);
+    border: 0px solid  rgba(0,0,0,0);
+}
+
