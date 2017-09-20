@@ -1,10 +1,11 @@
 .footer {
-    clear: both;
     margin: 5px auto;
-    border: 1px solid black;
     width: 100%;
     padding: 0px;
-
+    position: fixed; 
+    bottom: 0;
+    height: 160px;
+    background-color: #2b3e50;  
 }
 
 #timeline {
@@ -39,6 +40,7 @@
   border-radius: 50%;
   background: #F45B69;
 }
+
 #timeline a{
   position: relative;
   right:10px;
@@ -55,6 +57,10 @@
   margin: auto;
   width: 100px;
   white-space: nowrap;
+  position: fixed; 
+  bottom: 0;
+  left: 46vw;
+  height: 70px;
 }
 
 .arrow{
