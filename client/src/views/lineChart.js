@@ -1,15 +1,6 @@
 var _ = require('lodash');
 var LineChart = function(language){
     var container = document.getElementById('popChart')
-    // var dataFill = function(){
-    //     var popArray = []
-
-    //     for (var year of language[0].popularity){
-    //         var popDetails = _.values(year)
-    //          popArray.push(popDetails); 
-    //     }
-    //     return popArray
-    // }
 
     var dataFill = function(){
         var popArray = []
@@ -38,6 +29,9 @@ var LineChart = function(language){
             series: {
                 pointStart: parseInt(_.keys(language[0].popularity[0]))
             }
+        },
+        credits: {
+            enabled: false
         },
         title: {
             text: "Popularity over time",
