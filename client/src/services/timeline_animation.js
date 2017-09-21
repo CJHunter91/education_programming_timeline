@@ -21,7 +21,6 @@ TimelineAnimation.prototype.runTimeline = function() {
   for (var i = 0; i < this.arrows.length; i++) {
     this.arrows[i].addEventListener('click', function(event){
       //determines whether to remove or add scrolling
-      console.log(event)
       const sign = (event.path[1].classList.contains("prev-arrow")) ? "" : "-";
       var modifier = 0;
       if(document.querySelector('#language-id')){
@@ -106,7 +105,6 @@ TimelineAnimation.prototype.setBtnState = function(element, flag = true) {
 TimelineAnimation.prototype.moveToID =  function(id){
   this.timeline = document.querySelector("#timeline ol");
   var values = (id * 160) * -1;
-  console.log(values)
   this.timeline.style.transform = `translateX(${values}px)`;
 }
 
